@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Just A Click</a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-blue-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Why We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">News</a>
+            <a href="media.html"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Media</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <a href="login.html"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:bg-gray-100">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Why We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">About Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">News</a>
+        <a href="media.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">Media</a>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <span class="text-blue-600">Media</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Press releases, media resources, and company announcements from Just A Click.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Overview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Media Overview</h2>
+        <p class="text-xl text-gray-600">Access our latest press releases, media kit, and company resources</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-newspaper text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Press Releases</h3>
+          <p class="text-gray-600 mb-6">Official announcements and company news</p>
+          <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+            View All
+          </button>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-download text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Media Kit</h3>
+          <p class="text-gray-600 mb-6">Logos, images, and company information</p>
+          <button class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition duration-300">
+            Download
+          </button>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-user text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Media Contact</h3>
+          <p class="text-gray-600 mb-6">Get in touch with our media team</p>
+          <button class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">
+            Contact
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press Releases Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Press Releases</h2>
+        <p class="text-xl text-gray-600">Latest company announcements and news</p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Press Release 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex-1">
+                <div class="text-sm text-blue-600 font-semibold mb-2">Dec 15, 2024</div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Just A Click Successfully Issues US$300M Bond for
+                  Refinancing</h3>
+                <p class="text-lg text-gray-600 mb-6">
+                  Demonstrating financial strength amid global volatility, Just A Click has successfully issued a US$300
+                  million bond to refinance existing debt and fund expansion initiatives. The bond issuance was
+                  oversubscribed by 2.3x, reflecting strong investor confidence in the company's growth prospects and
+                  sustainable business model.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Read Full Release
+                  </button>
+                  <button
+                    class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+                    Download PDF
+                  </button>
+                </div>
+              </div>
+              <div class="ml-6">
+                <i class="fas fa-file-pdf text-gray-400 text-4xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Press Release 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex-1">
+                <div class="text-sm text-blue-600 font-semibold mb-2">Nov 28, 2024</div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Just A Click Acquires Orrsum to Accelerate
+                  Innovation</h3>
+                <p class="text-lg text-gray-600 mb-6">
+                  Strategic acquisition expands global product expertise and accelerates innovation in sustainable home
+                  furnishing solutions across key markets. The acquisition brings together complementary capabilities in
+                  design, manufacturing, and digital solutions.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Read Full Release
+                  </button>
+                  <button
+                    class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+                    Download PDF
+                  </button>
+                </div>
+              </div>
+              <div class="ml-6">
+                <i class="fas fa-file-pdf text-gray-400 text-4xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Press Release 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex-1">
+                <div class="text-sm text-blue-600 font-semibold mb-2">Aug 16, 2024</div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Fashion Tech Summit Showcases Sustainability as
+                  Key Competitive Advantage</h3>
+                <p class="text-lg text-gray-600 mb-6">
+                  Hong Kong positioned as Global Supply Chain Hub with focus on sustainable practices. Just A Click
+                  leads industry discussion on ESG initiatives and digital transformation in home furnishing supply
+                  chains.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Read Full Release
+                  </button>
+                  <button
+                    class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+                    Download PDF
+                  </button>
+                </div>
+              </div>
+              <div class="ml-6">
+                <i class="fas fa-file-pdf text-gray-400 text-4xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Press Release 4 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex-1">
+                <div class="text-sm text-blue-600 font-semibold mb-2">Jun 19, 2024</div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">IFC Partners with Just A Click to Support SME
+                  Growth</h3>
+                <p class="text-lg text-gray-600 mb-6">
+                  This partnership will increase access to affordable supply-chain finance for smaller enterprises in
+                  Asia and integrate greater digitalization in supply chain management. The initiative aims to support
+                  1,000+ SMEs across the region.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Read Full Release
+                  </button>
+                  <button
+                    class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+                    Download PDF
+                  </button>
+                </div>
+              </div>
+              <div class="ml-6">
+                <i class="fas fa-file-pdf text-gray-400 text-4xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Kit Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Media Kit</h2>
+        <p class="text-xl text-gray-600">Download logos, images, and company information</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-blue-200 to-blue-400 flex items-center justify-center">
+            <i class="fas fa-image text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Company Logos</h3>
+            <p class="text-gray-600 mb-4">High-resolution logos in various formats and color schemes.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">ZIP • 15.2 MB</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-green-200 to-green-400 flex items-center justify-center">
+            <i class="fas fa-camera text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Product Images</h3>
+            <p class="text-gray-600 mb-4">High-quality product photography and lifestyle images.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">ZIP • 45.8 MB</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-purple-200 to-purple-400 flex items-center justify-center">
+            <i class="fas fa-users text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Executive Photos</h3>
+            <p class="text-gray-600 mb-4">Professional headshots of key executives and team members.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">ZIP • 8.3 MB</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-yellow-200 to-yellow-400 flex items-center justify-center">
+            <i class="fas fa-file-alt text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Company Fact Sheet</h3>
+            <p class="text-gray-600 mb-4">Key company information, statistics, and achievements.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">PDF • 2.1 MB</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-red-200 to-red-400 flex items-center justify-center">
+            <i class="fas fa-video text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Video Assets</h3>
+            <p class="text-gray-600 mb-4">Company videos, product demonstrations, and interviews.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">ZIP • 125.7 MB</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-indigo-200 to-indigo-400 flex items-center justify-center">
+            <i class="fas fa-chart-bar text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Infographics</h3>
+            <p class="text-gray-600 mb-4">Visual representations of company data and achievements.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500">ZIP • 12.4 MB</span>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Contact Section -->
+  <section class="py-20 bg-gradient-to-br from-blue-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Media Contact</h2>
+        <p class="text-xl text-blue-100">Get in touch with our media relations team</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-white bg-opacity-10 rounded-lg p-8">
+          <h3 class="text-2xl font-semibold text-white mb-6">Press Inquiries</h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-white text-xl mr-4"></i>
+              <div>
+                <p class="text-white font-semibold">Email</p>
+                <p class="text-blue-100">press@justaclick.com</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone text-white text-xl mr-4"></i>
+              <div>
+                <p class="text-white font-semibold">Phone</p>
+                <p class="text-blue-100">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-clock text-white text-xl mr-4"></i>
+              <div>
+                <p class="text-white font-semibold">Response Time</p>
+                <p class="text-blue-100">Within 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white bg-opacity-10 rounded-lg p-8">
+          <h3 class="text-2xl font-semibold text-white mb-6">Media Relations Team</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-white font-semibold">Sarah Johnson</p>
+              <p class="text-blue-100">Director of Media Relations</p>
+              <p class="text-blue-100">sarah.johnson@justaclick.com</p>
+            </div>
+            <div>
+              <p class="text-white font-semibold">Michael Chen</p>
+              <p class="text-blue-100">Media Relations Manager</p>
+              <p class="text-blue-100">michael.chen@justaclick.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <button
+          class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+          Contact Media Team
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer Section -->
+  <footer class="bg-[#1F1F1F] text-gray-300">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white duration-300">Home</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Who We Are</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Our Services</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Blog</a></li>
+            <li><a href="#" class="hover:text-white duration-300">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+          <ul class="space-y-2">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-white duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-white duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

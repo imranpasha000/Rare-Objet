@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just A Click - The Supply Chain of the Future</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="Logo/favicon/favicon.ico">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <img src="Logo/Logo.jpg" alt="Logo"
+                class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-blue-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Why We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">News</a>
+            <div class="relative group">
+              <div
+                class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+                <div class="py-1">
+                  <a href="esg-strategy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ESG
+                    Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Supply Chain Innovation</a>
+                  <a href="investors.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Investors</a>
+                  <a href="media.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Media</a>
+                  <a href="suppliers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Suppliers</a>
+                  <a href="careers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Why We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">About Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">ESG Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Supply Chain
+            Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="relative w-full h-screen overflow-hidden flex items-center justify-center">
+
+    <!-- YouTube FULL Background -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <iframe class="w-full h-full pointer-events-none"
+        src="https://www.youtube.com/embed/fNxjNFiwxiA?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=fNxjNFiwxiA"
+        frameborder="0" allow="autoplay; encrypted-media; fullscreen"></iframe>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center text-white px-6">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold">
+        Creating <span class="text-blue-400">the supply chain
+          of the future</span>
+
+      </h1>
+      <p class="mt-4 text-lg sm:text-xl">
+        We Design, Manufacture & Deliver Worldwide
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#start" class="bg-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+          Get Started
+        </a>
+        <a href="#designs"
+          class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition">
+          Explore
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Our Strategy Section -->
+  <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Heading -->
+      <div class="space-y-6 mb-12">
+        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Our Strategy</h2>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Our vision is simple but bold – we aspire to create the supply chain of the future to help our customers
+          navigate the digital economy.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          We are facing an era of exponential change. The convergence of technologies has changed the way consumers
+          and businesses interact. Our aspiration is to deliver value in global supply chains by living our values
+          around people, partners and planet.
+        </p>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- ESG Strategy -->
+        <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
+          <div
+            class="w-full h-32 bg-gradient-to-br from-red-400 to-red-600 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fas fa-recycle text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">ESG STRATEGY</h3>
+          <p class="text-sm text-gray-600">Environmental, Social, and Governance initiatives driving sustainable growth
+          </p>
+        </div>
+
+        <!-- Our Purpose -->
+        <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
+          <div
+            class="w-full h-32 bg-gradient-to-br from-red-400 to-red-600 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fas fa-file-alt text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">OUR PURPOSE</h3>
+          <p class="text-sm text-gray-600">Delivering value through innovation and commitment to excellence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Supply Chain Innovation Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Heading -->
+      <div class="space-y-6 mb-12">
+        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Supply chain innovation</h2>
+        <p class="text-xl text-gray-600 leading-relaxed font-semibold">
+          We convene the global supply chain creating customized, end-to-end supply chain and logistics solutions for
+          brands and retailers. What sets us apart is our high degree of flexibility and scalability which is unrivaled
+          in our industry.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Millions of consumer goods pass through Li & Fung’s supply chain every year. For that to happen, we connect
+          thousands of suppliers and vendors with leading brands and retailers, all with the goal of meeting consumer
+          demand.
+        </p>
+      </div>
+
+      <!-- Sub section with cards -->
+      <div class="space-y-6 mb-10">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+          We are creating the supply chain of the future
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Traditional supply chain management is undergoing massive change driven by disruptive technologies in the
+          retail industry.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          At Li & Fung, we’re changing the game and landscape of our industry with innovative services and solutions.
+          Our scale allows us to act as a catalyst for change and as a convener of our supply chain partners.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Our supply chain solutions are all about helping our customers and suppliers deliver speed, efficiency and
+          profitability. Acting as a convener across the supply chain, we have six core tools, delivered through our
+          materials platform, 3D design platform, vendor platform and production platform.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supply Chain Orchestration Section -->
+  <section class="supply-chain-section">
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Supply Chain Orchestration</h2>
+        <p>Our integrated approach connects every stage of the supply chain, from initial design to final delivery</p>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="tab-content-area">
+
+        <!-- Tab 1: Supply Chain Orchestration (Circle) -->
+        <div class="tab-content active" id="tab-orchestration">
+          <div class="content-grid">
+            <!-- Circle Visualization -->
+            <div class="circle-container">
+              <div class="circle-wrapper">
+                <svg class="circle-svg" viewBox="0 0 500 500" id="circleSvg">
+                  <!-- Background Circle -->
+                  <circle class="circle-bg" cx="250" cy="250" r="200"></circle>
+
+                  <!-- Progress Circle -->
+                  <circle class="circle-progress" cx="250" cy="250" r="200" stroke-dasharray="1256.64"
+                    stroke-dashoffset="1256.64" id="progressCircle"></circle>
+
+                  <!-- Center Text -->
+                  <text x="250" y="240" text-anchor="middle" font-size="32" font-weight="bold" fill="#2563eb"
+                    transform="rotate(90, 250, 250)">
+                    Just A Click
+                  </text>
+                  <text x="250" y="270" text-anchor="middle" font-size="14" fill="#6b7280"
+                    transform="rotate(90, 250, 250)">
+                    Supply Chain
+                  </text>
+
+                  <!-- Stage Points (will be added by JS) -->
+                  <g id="stagePoints"></g>
+                </svg>
+              </div>
+
+              <button class="control-button" id="controlBtn">
+                <span id="controlText">⏸ Pause</span>
+              </button>
+            </div>
+
+            <!-- Content Display -->
+            <div class="content-display">
+              <div class="content-inner">
+                <h3 id="stageTitle">Retail</h3>
+                <p id="stageDescription">
+                  The supply chain journey follows the creation and movement of goods around the world.
+                  That journey begins and ends with the consumer.
+                </p>
+              </div>
+
+              <!-- Stage Indicators -->
+              <div class="stage-indicators" id="indicators"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: The LF Digital Platform (Video) -->
+        <div class="tab-content" id="tab-digital">
+          <div class="content-grid">
+            <div class="video-content">
+              <div class="video-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <h3>The LF Digital Platform</h3>
+                <p>Watch how our technology transforms supply chain management</p>
+              </div>
+            </div>
+            <div class="content-display">
+              <div class="content-inner">
+                <h3>Digital Innovation</h3>
+                <p>
+                  Our digital platform leverages cutting-edge technology to provide real-time visibility,
+                  advanced analytics, and seamless integration across your entire supply chain network.
+                  From raw material sourcing to final delivery, our platform ensures efficiency, transparency,
+                  and collaboration at every step.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Supply Chain Solutions (Speed Chart) -->
+        <div class="tab-content" id="tab-solutions">
+          <div class="content-grid">
+            <div class="speed-chart">
+              <h3>Enabling speed in the product development cycle</h3>
+              <div class="chart-bars">
+                <div class="chart-bar">
+                  <div class="bar-label">Average calendar: 40 weeks</div>
+                  <div class="bar-container">
+                    <div class="bar-fill gray" style="width: 100%;"></div>
+                  </div>
+                </div>
+                <div class="chart-bar">
+                  <div class="bar-label">With Just A Click digital apps: 21 weeks</div>
+                  <div class="bar-container">
+                    <div class="bar-fill red" style="width: 52.5%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-display">
+              <div class="content-inner">
+                <h3>Accelerated Solutions</h3>
+                <p>
+                  Our innovative approach reduces product development cycles by nearly 50%, enabling faster
+                  time-to-market and increased competitiveness. Through digital collaboration tools, automated
+                  workflows, and real-time communication, we help you stay ahead in today's fast-paced market.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Cards (Navigation) -->
+      <div class="bottom-cards">
+        <div class="info-card active" data-tab="tab-orchestration">
+          <h4>SUPPLY CHAIN ORCHESTRATION</h4>
+          <p>End-to-end coordination of all supply chain activities</p>
+        </div>
+        <div class="info-card" data-tab="tab-digital">
+          <h4>THE LF DIGITAL PLATFORM</h4>
+          <p>Technology-driven solutions for modern supply chains</p>
+        </div>
+        <div class="info-card" data-tab="tab-solutions">
+          <h4>SUPPLY CHAIN SOLUTIONS</h4>
+          <p>Customized strategies for your business needs</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Stage Data
+      const stages = [
+        {
+          name: 'Retail',
+          title: 'Retail',
+          description: 'The supply chain journey follows the creation and movement of goods around the world. That journey begins and ends with the consumer.',
+          angle: 0
+        },
+        {
+          name: 'Design',
+          title: 'Design',
+          description: 'From concept to design brief, the design process translates trends into products that meet the needs of today\'s demanding consumer.',
+          angle: 72
+        },
+        {
+          name: 'Sourcing',
+          title: 'Sourcing',
+          description: 'Finding the right materials and factories that share our commitment to quality, compliance and sustainability is a fundamental activity.',
+          angle: 144
+        },
+        {
+          name: 'Production',
+          title: 'Production',
+          description: 'Merchandisers, designers, quality engineers and product development experts work with factories to ensure products meet the requirements.',
+          angle: 216
+        },
+        {
+          name: 'Logistics',
+          title: 'Logistics',
+          description: 'Logistics solutions start from the moment the product leaves the factory to the time it reaches the hands of a happy shopper.',
+          angle: 288
+        }
+      ];
+
+      // State
+      let activeStage = 0;
+      let isAutoPlay = true;
+      let interval;
+
+      // Elements
+      const progressCircle = document.getElementById('progressCircle');
+      const stageTitle = document.getElementById('stageTitle');
+      const stageDescription = document.getElementById('stageDescription');
+      const controlBtn = document.getElementById('controlBtn');
+      const controlText = document.getElementById('controlText');
+      const stagePointsGroup = document.getElementById('stagePoints');
+      const indicatorsContainer = document.getElementById('indicators');
+
+      // Tab Navigation
+      const infoCards = document.querySelectorAll('.info-card');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      infoCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const tabId = card.getAttribute('data-tab');
+
+          // Update active card
+          infoCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+
+          // Update active tab
+          tabContents.forEach(tab => tab.classList.remove('active'));
+          document.getElementById(tabId).classList.add('active');
+
+          // Reset circle animation if switching to orchestration tab
+          if (tabId === 'tab-orchestration') {
+            activeStage = 0;
+            updateUI();
+            if (isAutoPlay) {
+              stopAutoPlay();
+              startAutoPlay();
+            }
+          }
+        });
+      });
+
+      // Calculate point on circle
+      function getPointOnCircle(angle, radius = 200) {
+        const radian = (angle - 90) * (Math.PI / 180);
+        return {
+          x: 250 + radius * Math.cos(radian),
+          y: 250 + radius * Math.sin(radian)
+        };
+      }
+
+      // Create stage points
+      function createStagePoints() {
+        stages.forEach((stage, index) => {
+          const point = getPointOnCircle(stage.angle);
+          const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+          g.classList.add('stage-point');
+          g.setAttribute('data-index', index);
+
+          // Circle
+          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          circle.setAttribute('cx', point.x);
+          circle.setAttribute('cy', point.y);
+          circle.setAttribute('r', '8');
+          circle.setAttribute('fill', '#ffffff');
+          circle.setAttribute('stroke', '#ef4444');
+          circle.setAttribute('stroke-width', '3');
+
+          // Text - rotated to be vertical (upright regardless of position)
+          const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          text.setAttribute('x', point.x + (stage.angle <= 180 ? 25 : -25));
+          text.setAttribute('y', point.y + 5);
+          text.setAttribute('text-anchor', stage.angle <= 180 ? 'start' : 'end');
+          text.setAttribute('transform', `rotate(90, ${point.x + (stage.angle <= 180 ? 25 : -25)}, ${point.y + 5})`);
+          text.textContent = stage.name;
+
+          g.appendChild(circle);
+          g.appendChild(text);
+          stagePointsGroup.appendChild(g);
+
+          // Click handler
+          g.addEventListener('click', () => {
+            setActiveStage(index);
+            isAutoPlay = false;
+            updateControlButton();
+          });
+        });
+      }
+
+      // Create indicators
+      function createIndicators() {
+        stages.forEach((stage, index) => {
+          const indicator = document.createElement('div');
+          indicator.classList.add('indicator');
+          indicator.setAttribute('data-index', index);
+          indicator.addEventListener('click', () => {
+            setActiveStage(index);
+            isAutoPlay = false;
+            updateControlButton();
+          });
+          indicatorsContainer.appendChild(indicator);
+        });
+      }
+
+      // Update active stage
+      function setActiveStage(index) {
+        activeStage = index;
+        updateUI();
+      }
+
+      // Update UI
+      function updateUI() {
+        // Update content
+        stageTitle.textContent = stages[activeStage].title;
+        stageDescription.textContent = stages[activeStage].description;
+
+        // Update progress circle
+        const circumference = 2 * Math.PI * 200;
+        const progress = ((activeStage + 1) / stages.length) * circumference;
+        progressCircle.style.strokeDashoffset = circumference - progress;
+
+        // Update stage points
+        const points = document.querySelectorAll('.stage-point');
+        points.forEach((point, index) => {
+          const circle = point.querySelector('circle');
+          if (index === activeStage) {
+            point.classList.add('active');
+            circle.setAttribute('r', '12');
+            circle.setAttribute('fill', '#ef4444');
+          } else if (index < activeStage) {
+            point.classList.remove('active');
+            circle.setAttribute('r', '8');
+            circle.setAttribute('fill', '#ef4444');
+          } else {
+            point.classList.remove('active');
+            circle.setAttribute('r', '8');
+            circle.setAttribute('fill', '#ffffff');
+          }
+        });
+
+        // Update indicators
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach((indicator, index) => {
+          indicator.classList.remove('active', 'passed');
+          if (index === activeStage) {
+            indicator.classList.add('active');
+          } else if (index < activeStage) {
+            indicator.classList.add('passed');
+          }
+        });
+      }
+
+      // Auto-play
+      function startAutoPlay() {
+        interval = setInterval(() => {
+          activeStage = (activeStage + 1) % stages.length;
+          updateUI();
+        }, 3000);
+      }
+
+      function stopAutoPlay() {
+        clearInterval(interval);
+      }
+
+      function updateControlButton() {
+        if (isAutoPlay) {
+          controlText.textContent = '⏸ Pause';
+          startAutoPlay();
+        } else {
+          controlText.textContent = '▶ Play';
+          stopAutoPlay();
+        }
+      }
+
+      // Control button handler
+      controlBtn.addEventListener('click', () => {
+        isAutoPlay = !isAutoPlay;
+        updateControlButton();
+      });
+
+      // Initialize
+      createStagePoints();
+      createIndicators();
+      updateUI();
+      startAutoPlay();
+    </script>
+  </section>
+
+  <section id="team" class="py-20 bg-gray-50 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Section Heading -->
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">
+        <span class="text-blue-900">Our</span> Team
+      </h2>
+      <p class="text-gray-600 text-lg mb-12">
+        Our people are our greatest asset and biggest differentiator.<br />
+        They also believe in having a lot of fun along the way.
+      </p>
+
+      <!-- Team Members -->
+      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <!-- Team Card -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6">
+          <div class="relative">
+            <img src="https://placebeard.it/450x450/11" alt="Jose Knutson"
+              class="w-40 h-40 mx-auto rounded-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <div
+              class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 bg-black/50 rounded-full transition-opacity duration-300">
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-envelope"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h5 class="text-xl font-semibold text-gray-800">Jose Knutson</h5>
+            <p class="text-gray-500">Co-founder</p>
+          </div>
+        </div>
+
+        <!-- Repeat for other members -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6">
+          <div class="relative">
+            <img src="https://placebeard.it/450x450/2" alt="Bernard Ramos"
+              class="w-40 h-40 mx-auto rounded-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <div
+              class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 bg-black/50 rounded-full transition-opacity duration-300">
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-envelope"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h5 class="text-xl font-semibold text-gray-800">Bernard Ramos</h5>
+            <p class="text-gray-500">Co-founder</p>
+          </div>
+        </div>
+
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6">
+          <div class="relative">
+            <img src="https://placebeard.it/450x450/3" alt="Michael Alexander"
+              class="w-40 h-40 mx-auto rounded-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <div
+              class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 bg-black/50 rounded-full transition-opacity duration-300">
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-envelope"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h5 class="text-xl font-semibold text-gray-800">Michael Alexander</h5>
+            <p class="text-gray-500">Co-founder</p>
+          </div>
+        </div>
+
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6">
+          <div class="relative">
+            <img src="https://placebeard.it/450x450/4" alt="Herman Mach"
+              class="w-40 h-40 mx-auto rounded-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <div
+              class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 bg-black/50 rounded-full transition-opacity duration-300">
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-envelope"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="text-white text-xl hover:text-red-500"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h5 class="text-xl font-semibold text-gray-800">Herman Mach</h5>
+            <p class="text-gray-500">Software Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Our Services – Tailored for Buyers, Wholesalers & Vendors
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          End-to-end home furnishing solutions – from exclusive designs to global delivery.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-pencil-ruler text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">In-House Product Design</h3>
+          <p class="text-gray-600">Creative and innovative designs tailored to your specific needs and market demands.
+          </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-search text-green-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Sourcing & Procurement</h3>
+          <p class="text-gray-600">Expert sourcing of materials and components from verified suppliers worldwide.</p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-industry text-purple-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Manufacturing & Production</h3>
+          <p class="text-gray-600">Complete production management with quality control and timeline adherence.</p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-check-circle text-yellow-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Assurance</h3>
+          <p class="text-gray-600">Rigorous quality checks and auditing to ensure the highest standards.</p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-cogs text-red-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Customization</h3>
+          <p class="text-gray-600">Tailored solutions and custom modifications to meet your specific requirements.</p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-globe text-indigo-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Shipping</h3>
+          <p class="text-gray-600">Worldwide logistics and delivery services to reach your customers anywhere.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+          Request a Quote
+        </button>
+        <button
+          class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
+          Explore Our Designs
+        </button>
+        <button
+          class="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+          Become a Supplier
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Explore Our Product Lines – Curated for Every Business Need
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From furniture and lighting to decor and textiles — crafted for buyers, wholesalers, and vendors.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+            <i class="fas fa-couch text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Furniture</h3>
+            <p class="text-gray-600">Premium furniture pieces for every room and style preference.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+            <i class="fas fa-lightbulb text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Lighting</h3>
+            <p class="text-gray-600">Modern and traditional lighting solutions for every space.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+            <i class="fas fa-home text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Home Decor</h3>
+            <p class="text-gray-600">Beautiful decorative items to enhance your living spaces.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+            <i class="fas fa-leaf text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Outdoor & Gardens</h3>
+            <p class="text-gray-600">Outdoor furniture and garden essentials for beautiful exteriors.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+            <i class="fas fa-tshirt text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Textiles & Fashion</h3>
+            <p class="text-gray-600">High-quality textiles and fashion accessories for your home.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+            <i class="fas fa-drafting-compass text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Custom Designs</h3>
+            <p class="text-gray-600">Bespoke designs tailored to your specific requirements.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+            <i class="fas fa-boxes text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Bulk/Wholesale Packs</h3>
+            <p class="text-gray-600">Cost-effective wholesale packages for business customers.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+            <i class="fas fa-tools text-white text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Home Utility</h3>
+            <p class="text-gray-600">Essential home utility items for everyday living.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+          View Full Collection
+        </button>
+        <button
+          class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
+          Request Custom Quote
+        </button>
+        <button
+          class="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+          Partner with Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why We Exist Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Why We Exist – Driven by Excellence, Innovation & Trust
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From design to delivery, we empower buyers, wholesalers, and vendors with seamless, reliable, premium
+          solutions.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-link text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">End-to-End Solutions</h3>
+          <p class="text-gray-600">Complete service from concept to delivery</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-industry text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Own Designs & Manufacturing</h3>
+          <p class="text-gray-600">In-house design and production capabilities</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Verified Suppliers</h3>
+          <p class="text-gray-600">Trusted network of quality suppliers</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-cogs text-yellow-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Customization & Flexibility</h3>
+          <p class="text-gray-600">Tailored solutions for every need</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-globe text-red-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Reach</h3>
+          <p class="text-gray-600">Worldwide delivery and support</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-users text-indigo-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Dedicated Team</h3>
+          <p class="text-gray-600">Expert professionals at your service</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+          Request a Quote
+        </button>
+        <button
+          class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
+          Explore Our Designs
+        </button>
+        <button
+          class="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+          Partner with Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <!-- <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-2 gap-12 items-center"> -->
+  <!-- Left Column - Text/Story -->
+  <!-- <div class="space-y-6">
+            <h1 class="text-4xl lg:text-4xl font-bold text-gray-900 leading-tight">
+              Welcome to <span class="text-blue-600">Just A Click</span> – Your Complete Home Furnishing Partner
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+              From our own designs to sourcing, manufacturing, and global delivery – we handle every step of your home
+              furnishing journey with expertise and care.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Whether you're a buyer looking for unique pieces, a wholesaler seeking reliable suppliers, or a vendor
+              wanting to expand your reach, we provide end-to-end solutions that transform your vision into reality. Our
+              dedicated team of designers, manufacturers, and logistics experts work together to deliver exceptional
+              quality and service across the globe.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                Get Started Today
+              </button>
+              <button
+                class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
+                Explore Our Designs
+              </button>
+            </div>
+          </div> -->
+
+  <!-- Right Column - Visual/Media -->
+  <!-- <div class="relative">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
+                  <div
+                    class="w-full h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg mb-3 flex items-center justify-center">
+                    <i class="fas fa-palette text-white text-2xl"></i>
+                  </div>
+                  <h3 class="font-semibold text-gray-900">Designers Creating</h3>
+                  <p class="text-sm text-gray-600">Innovative home furnishing designs</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
+                  <div
+                    class="w-full h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-lg mb-3 flex items-center justify-center">
+                    <i class="fas fa-cogs text-white text-2xl"></i>
+                  </div>
+                  <h3 class="font-semibold text-gray-900">Manufacturing</h3>
+                  <p class="text-sm text-gray-600">Quality production processes</p>
+                </div>
+              </div>
+              <div class="space-y-4 mt-8">
+                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
+                  <div
+                    class="w-full h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg mb-3 flex items-center justify-center">
+                    <i class="fas fa-shipping-fast text-white text-2xl"></i>
+                  </div>
+                  <h3 class="font-semibold text-gray-900">Global Delivery</h3>
+                  <p class="text-sm text-gray-600">Worldwide shipping & logistics</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
+                  <div
+                    class="w-full h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg mb-3 flex items-center justify-center">
+                    <i class="fas fa-handshake text-white text-2xl"></i>
+                  </div>
+                  <h3 class="font-semibold text-gray-900">Partnership</h3>
+                  <p class="text-sm text-gray-600">Trusted business relationships</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+  <!-- </div>
+      </div>
+    </section> -->
+
+  <!-- Get Started Section -->
+  <section class="py-20 bg-gradient-to-br from-blue-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">
+          Get Started – Connect with Just A Click Today
+        </h2>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+          Whether you're a buyer, wholesaler, or vendor, log in to access exclusive collections, place orders, and
+          collaborate with our team of experts.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-lg p-8 text-center hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Buyer Login</h3>
+          <p class="text-gray-600 mb-6">Access our exclusive collections and place orders for your home furnishing
+            needs.</p>
+          <button
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">
+            Login as Buyer
+          </button>
+        </div>
+
+        <div class="bg-white rounded-lg p-8 text-center hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-warehouse text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Wholesaler Login</h3>
+          <p class="text-gray-600 mb-6">Manage wholesale orders and access bulk pricing for your business.</p>
+          <button
+            class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300 w-full">
+            Login as Wholesaler
+          </button>
+        </div>
+
+        <div class="bg-white rounded-lg p-8 text-center hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Vendor Login</h3>
+          <p class="text-gray-600 mb-6">Partner with us and expand your reach in the home furnishing market.</p>
+          <button
+            class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 w-full">
+            Login as Vendor
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h3 class="text-2xl font-bold text-white mb-4">
+          Ready to Transform Your Home Furnishing Business?
+        </h3>
+        <p class="text-lg text-blue-100 mb-8">
+          Our dedicated team is ready to handle your end-to-end sourcing, design, and wholesale needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+            Request a Quote
+          </button>
+          <button
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+            Partner with Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-[#1F1F1F] text-gray-300">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white duration-300">Home</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Who We Are</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Our Services</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Blog</a></li>
+            <li><a href="#" class="hover:text-white duration-300">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+          <ul class="space-y-2">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-white duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-white duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

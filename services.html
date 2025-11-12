@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Just A Click</a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-blue-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="services.html"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Why We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button
+            class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:bg-gray-100">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Why We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Portfolio</a>
+        <div class="pt-3">
+          <button
+            class="block text-center w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
+            Login</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          Our <span class="text-blue-600">Services</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          End-to-end home furnishing solutions – from exclusive designs to global delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 card-hover">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-pencil-ruler text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">In-House Product Design</h3>
+          <p class="text-gray-600 mb-6">Our creative team designs unique, market-ready home furnishing products tailored
+            to your specific needs and target audience.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Custom design development</li>
+            <li>• Market research and trends</li>
+            <li>• 3D modeling and prototyping</li>
+            <li>• Design optimization</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 card-hover">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-search text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Sourcing & Procurement</h3>
+          <p class="text-gray-600 mb-6">We source high-quality materials and components from verified suppliers
+            worldwide, ensuring the best value and quality.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Global supplier network</li>
+            <li>• Quality verification</li>
+            <li>• Cost optimization</li>
+            <li>• Supply chain management</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 card-hover">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-industry text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Manufacturing & Production</h3>
+          <p class="text-gray-600 mb-6">Complete production management with state-of-the-art facilities and skilled
+            craftsmen ensuring quality and efficiency.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Production planning</li>
+            <li>• Quality control</li>
+            <li>• Timeline management</li>
+            <li>• Capacity optimization</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 card-hover">
+          <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-check-circle text-yellow-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Quality Assurance & Auditing</h3>
+          <p class="text-gray-600 mb-6">Rigorous quality checks and auditing processes to ensure every product meets our
+            high standards.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Multi-stage quality checks</li>
+            <li>• Compliance verification</li>
+            <li>• Performance testing</li>
+            <li>• Documentation and certification</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 card-hover">
+          <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cogs text-red-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Customization & Tailored Solutions</h3>
+          <p class="text-gray-600 mb-6">Flexible customization options to meet your specific requirements and market
+            demands.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Custom specifications</li>
+            <li>• Brand integration</li>
+            <li>• Size and color options</li>
+            <li>• Special requirements</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 card-hover">
+          <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-globe text-indigo-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Global Shipping & Logistics</h3>
+          <p class="text-gray-600 mb-6">Worldwide shipping and logistics services to deliver your products anywhere in
+            the world safely and on time.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• International shipping</li>
+            <li>• Customs clearance</li>
+            <li>• Tracking and monitoring</li>
+            <li>• Insurance coverage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
+        <p class="text-xl text-gray-600">How we bring your vision to life</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
+
+        <div class="space-y-12">
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">1. Consultation & Planning</h3>
+                <p class="text-gray-600">We understand your needs and create a detailed project plan.</p>
+              </div>
+            </div>
+            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold z-10">1
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold z-10">2
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">2. Design & Development</h3>
+                <p class="text-gray-600">Our team creates custom designs and prototypes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">3. Production & Quality</h3>
+                <p class="text-gray-600">Manufacturing with strict quality control processes.</p>
+              </div>
+            </div>
+            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold z-10">3
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold z-10">4
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">4. Delivery & Support</h3>
+                <p class="text-gray-600">Global shipping and ongoing customer support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-blue-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+        Let us help you transform your home furnishing business with our comprehensive services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+          Request a Quote
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+          Explore Our Designs
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+          Become a Supplier
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer Section -->
+  <footer class="bg-[#1F1F1F] text-gray-300">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white duration-300">Home</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Who We Are</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Our Services</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Blog</a></li>
+            <li><a href="#" class="hover:text-white duration-300">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+          <ul class="space-y-2">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-white duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-white duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

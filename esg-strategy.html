@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESG Strategy - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Just A Click</a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-blue-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Why We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+            <a href="esg-strategy.html"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">ESG Strategy</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <a href="login.html"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:bg-gray-100">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Why We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Portfolio</a>
+        <a href="esg-strategy.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">ESG Strategy</a>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-green-50 to-blue-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          ESG <span class="text-green-600">Strategy</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We responsibly manage our environmental, social and governance performance and work with our customers,
+          suppliers and industry partners to further the sustainability of supply chains and communities across our
+          ecosystem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESG Overview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our ESG Commitment</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          At Just A Click, we believe that sustainable business practices are not just good for the planet and society,
+          but also essential for long-term business success.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-leaf text-green-600 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Environmental</h3>
+          <p class="text-gray-600">Protecting our planet through sustainable practices, renewable energy, and waste
+            reduction initiatives.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-blue-600 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Social</h3>
+          <p class="text-gray-600">Supporting our people, communities, and supply chain partners through fair practices
+            and community engagement.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-shield-alt text-purple-600 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Governance</h3>
+          <p class="text-gray-600">Maintaining the highest standards of ethics, transparency, and accountability in all
+            our operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environmental Initiatives -->
+  <section class="py-20 bg-green-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Protecting Our Planet</h2>
+        <p class="text-xl text-gray-600">Environmental initiatives that make a real difference</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg p-6 shadow-lg">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-solar-panel text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Renewable Energy</h3>
+          <p class="text-gray-600 mb-4">100% renewable energy in our manufacturing facilities and offices worldwide.</p>
+          <div class="text-2xl font-bold text-green-600">100%</div>
+          <p class="text-sm text-gray-500">Renewable Energy Usage</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-lg">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-recycle text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Waste Reduction</h3>
+          <p class="text-gray-600 mb-4">Zero waste to landfill across all our operations through comprehensive recycling
+            programs.</p>
+          <div class="text-2xl font-bold text-blue-600">0%</div>
+          <p class="text-sm text-gray-500">Waste to Landfill</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-lg">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-tree text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Carbon Neutral</h3>
+          <p class="text-gray-600 mb-4">Carbon neutral operations through emission reduction and offset programs.</p>
+          <div class="text-2xl font-bold text-purple-600">-25%</div>
+          <p class="text-sm text-gray-500">Carbon Footprint Reduction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Responsibility -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">People in the Supply Chain</h2>
+        <p class="text-xl text-gray-600">Supporting our people and communities</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">Fair Labor Practices</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            We ensure fair wages, safe working conditions, and respect for human rights throughout our supply chain.
+            Our comprehensive supplier code of conduct sets the highest standards for ethical business practices.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-3"></i>
+              <span class="text-gray-700">Living wage compliance across all suppliers</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-3"></i>
+              <span class="text-gray-700">Zero tolerance for child labor</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-3"></i>
+              <span class="text-gray-700">Safe working conditions audits</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-3"></i>
+              <span class="text-gray-700">Gender equality and diversity programs</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-8">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">50,000+</div>
+              <p class="text-gray-600">Workers in Our Supply Chain</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">100%</div>
+              <p class="text-gray-600">Supplier Code Compliance</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">25</div>
+              <p class="text-gray-600">Countries with Local Programs</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-yellow-600 mb-2">$2M+</div>
+              <p class="text-gray-600">Community Investment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Governance -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">A Responsible Citizen</h2>
+        <p class="text-xl text-gray-600">Transparent governance and ethical business practices</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-balance-scale text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Ethics & Compliance</h3>
+          <p class="text-gray-600">Comprehensive ethics training and compliance programs for all employees.</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-eye text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Transparency</h3>
+          <p class="text-gray-600">Regular reporting on ESG performance and supply chain practices.</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-gavel text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Whistleblowing Policy</h3>
+          <p class="text-gray-600">Safe and confidential reporting channels for ethical concerns.</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+          <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-chart-line text-yellow-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Performance Tracking</h3>
+          <p class="text-gray-600">Regular monitoring and improvement of ESG metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESG News -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">ESG News</h2>
+        <p class="text-xl text-gray-600">Latest updates on our sustainability initiatives</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-green-200 to-green-400 flex items-center justify-center">
+            <i class="fas fa-newspaper text-green-600 text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <div class="text-sm text-blue-600 font-semibold mb-2">Dec 15, 2024</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Carbon Neutral Manufacturing Achieved</h3>
+            <p class="text-gray-600">Just A Click achieves carbon neutral status across all manufacturing facilities.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-blue-200 to-blue-400 flex items-center justify-center">
+            <i class="fas fa-newspaper text-blue-600 text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <div class="text-sm text-blue-600 font-semibold mb-2">Nov 28, 2024</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Supplier Diversity Program Launch</h3>
+            <p class="text-gray-600">New program to increase supplier diversity and support minority-owned businesses.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-purple-200 to-purple-400 flex items-center justify-center">
+            <i class="fas fa-newspaper text-purple-600 text-4xl"></i>
+          </div>
+          <div class="p-6">
+            <div class="text-sm text-blue-600 font-semibold mb-2">Oct 12, 2024</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">ESG Report 2024 Published</h3>
+            <p class="text-gray-600">Comprehensive ESG report showcasing our sustainability achievements and goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-green-600 to-blue-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Join Our Sustainability Journey</h2>
+      <p class="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+        Together, we can create a more sustainable future for home furnishing and global supply chains.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+          Download ESG Report
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+          Partner with Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer Section -->
+  <footer class="bg-[#1F1F1F] text-gray-300">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white duration-300">Home</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Who We Are</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Our Services</a></li>
+            <li><a href="#" class="hover:text-white duration-300">Blog</a></li>
+            <li><a href="#" class="hover:text-white duration-300">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+          <ul class="space-y-2">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-white duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-white duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
