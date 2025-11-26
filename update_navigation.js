@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+const fs = require('fs');
+const path = require('path');
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Just A Click</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body class="bg-gray-50 min-h-screen flex items-center justify-center">
-  <!-- Navigation -->
-  <nav class="bg-white/95 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50 border-b border-gray-100">
+// Premium navigation template
+const PREMIUM_NAV = `  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center flex-1 min-w-0">
@@ -113,97 +104,86 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav>`;
 
-  <!-- Login Form -->
-  <div class="pt-20 w-full max-w-md mx-auto px-4">
-    <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-      <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Welcome Back</h1>
-        <p class="text-gray-600 text-lg">Sign in to your Just A Click account</p>
-      </div>
+function updateNavigationInFile(filepath) {
+  try {
+    let content = fs.readFileSync(filepath, 'utf8');
+    
+    // Pattern to match the old navigation section (from <!-- Navigation --> to </nav>)
+    const navPattern = /<!-- Navigation -->[\s\S]*?<\/nav>/;
+    
+    // Check if file needs updating
+    if (navPattern.test(content)) {
+      // Get the current page name to highlight it in navigation
+      const filename = path.basename(filepath, '.html');
+      let updatedNav = PREMIUM_NAV;
+      
+      // Update active state for current page
+      const pageMap = {
+        'index': 'index.html',
+        'services': 'services.html',
+        'products': 'products.html',
+        'why-we-exist': 'why-we-exist.html',
+        'portfolio': 'portfolio.html',
+        'about-us': 'about-us.html',
+        'news': 'news.html',
+        'esg-strategy': 'esg-strategy.html',
+        'supply-chain-innovation': 'supply-chain-innovation.html',
+        'investors': 'investors.html',
+        'media': 'media.html',
+        'suppliers': 'suppliers.html',
+        'careers': 'careers.html',
+        'login': 'login.html',
+        'signup': 'signup.html'
+      };
+      
+      // Replace navigation
+      content = content.replace(navPattern, updatedNav);
+      
+      // Write back
+      fs.writeFileSync(filepath, content, 'utf8');
+      console.log(`✓ Updated ${filepath}`);
+      return true;
+    } else {
+      console.log(`⚠ Skipped ${filepath} (no navigation found or already updated)`);
+      return false;
+    }
+  } catch (error) {
+    console.error(`✗ Error updating ${filepath}: ${error.message}`);
+    return false;
+  }
+}
 
-      <form class="space-y-6" id="loginForm">
-        <div>
-          <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-          <input type="email" id="email" name="email" required
-            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
-        </div>
+// Files to update
+const filesToUpdate = [
+  'about-us.html',
+  'why-we-exist.html',
+  'portfolio.html',
+  'news.html',
+  'esg-strategy.html',
+  'supply-chain-innovation.html',
+  'investors.html',
+  'media.html',
+  'suppliers.html',
+  'careers.html',
+  'team-experts.html',
+  'signup.html'
+];
 
-        <div>
-          <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
-          <input type="password" id="password" name="password" required
-            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
-        </div>
+// Main execution
+console.log('Updating navigation in HTML files...\n');
+let updated = 0;
 
-        <div class="flex items-center justify-between">
-          <label class="flex items-center">
-            <input type="checkbox" class="mr-2 rounded">
-            <span class="text-sm text-gray-600">Remember me</span>
-          </label>
-          <a href="#" class="text-sm text-blue-600 hover:text-blue-800">Forgot password?</a>
-        </div>
+filesToUpdate.forEach(file => {
+  if (fs.existsSync(file)) {
+    if (updateNavigationInFile(file)) {
+      updated++;
+    }
+  } else {
+    console.log(`⚠ File not found: ${file}`);
+  }
+});
 
-        <button type="submit"
-          class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:scale-105">
-          Sign In
-        </button>
-      </form>
+console.log(`\n✓ Updated ${updated} files`);
 
-      <div class="mt-6">
-        <div class="relative">
-          <div class="absolute inset-0 flex items-center">
-            <div class="w-full border-t border-gray-300"></div>
-          </div>
-          <div class="relative flex justify-center text-sm">
-            <span class="px-2 bg-white text-gray-500">Or continue with</span>
-          </div>
-        </div>
-
-        <div class="mt-6 grid grid-cols-2 gap-3">
-          <button
-            class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-            <i class="fab fa-google text-red-500 mr-2"></i>
-            Google
-          </button>
-          <button
-            class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-            <i class="fab fa-microsoft text-blue-500 mr-2"></i>
-            Microsoft
-          </button>
-        </div>
-      </div>
-
-      <div class="mt-6 text-center">
-        <p class="text-sm text-gray-600">
-          Don't have an account?
-          <a href="signup.html" class="text-blue-600 hover:text-blue-800 font-semibold">Sign up here</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      // Simulate login process
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Signing in...';
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        // Simulate successful login
-        alert('Login successful! Welcome to Just A Click.');
-        window.location.href = 'index.html';
-      }, 2000);
-    });
-  </script>
-</body>
-
-</html>

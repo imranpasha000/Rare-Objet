@@ -3,6 +3,12 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Custom animations */
@@ -16,6 +22,10 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
 }
 
 @keyframes slideInLeft {
@@ -287,35 +297,93 @@ nav img {
 
 /* Supply Chain Section */
 .supply-chain-section {
-  padding: 80px 0;
+  padding: 40px 0;
   background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+}
+
+@media (min-width: 640px) {
+  .supply-chain-section {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .supply-chain-section {
+    padding: 80px 0;
+  }
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 24px;
+  }
 }
 
 /* Header */
 .section-header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .section-header {
+    margin-bottom: 48px;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-header {
+    margin-bottom: 64px;
+  }
 }
 
 .section-header h2 {
-  font-size: 3rem;
+  font-size: 1.875rem;
   font-weight: bold;
   color: #111827;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  .section-header h2 {
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
 }
 
 .section-header p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #6b7280;
   max-width: 768px;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .section-header p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-header p {
+    font-size: 1.25rem;
+  }
 }
 
 /* Tab Content Area */
@@ -334,9 +402,16 @@ nav img {
 /* Main Content */
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
 }
 
 /* Circle Container */
@@ -345,13 +420,41 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .circle-container {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .circle-container {
+    padding: 40px;
+  }
 }
 
 .circle-wrapper {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+}
+
+@media (min-width: 640px) {
+  .circle-wrapper {
+    max-width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .circle-wrapper {
+    max-width: 500px;
+    height: 500px;
+  }
 }
 
 .circle-svg {
@@ -420,13 +523,28 @@ nav img {
 /* Content Display */
 .content-display {
   background: white;
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  padding: 48px;
-  min-height: 400px;
+  padding: 24px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .content-display {
+    border-radius: 16px;
+    padding: 32px;
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-display {
+    padding: 48px;
+    min-height: 400px;
+  }
 }
 
 .content-inner {
@@ -565,8 +683,22 @@ nav img {
 /* Bottom Cards */
 .bottom-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .bottom-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bottom-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
 }
 
 .info-card {
@@ -609,11 +741,6 @@ nav img {
     grid-template-columns: 1fr;
   }
 
-  .circle-wrapper {
-    width: 400px;
-    height: 400px;
-  }
-
   .section-header h2 {
     font-size: 2.5rem;
   }
@@ -624,17 +751,21 @@ nav img {
     grid-template-columns: 1fr;
   }
 
-  .circle-wrapper {
-    width: 350px;
-    height: 350px;
-  }
-
   .section-header h2 {
     font-size: 2rem;
   }
 
   .content-display,
   .speed-chart {
-    padding: 32px;
+    padding: 24px;
+  }
+  
+  .speed-chart {
+    padding: 20px;
+  }
+  
+  .speed-chart h3 {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
   }
 }
