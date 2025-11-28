@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Purpose - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="Logo/favicon/favicon.ico">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <img src="Logo/Logo.jpg" alt="Logo"
+                class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-blue-900 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-1">
+            <a href="index.html"
+              class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Why
+              We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">About
+              Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+            <div class="relative group">
+              <button
+                class="text-gray-500 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div
+                class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div class="py-2">
+                  <a href="esg-strategy.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">ESG
+                    Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Supply
+                    Chain Innovation</a>
+                  <a href="investors.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Investors</a>
+                  <a href="media.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Media</a>
+                  <a href="suppliers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Suppliers</a>
+                  <a href="careers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-lg">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-blue-50 text-blue-900">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Why
+          We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">About
+          Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">ESG
+            Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Supply
+            Chain Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-md">
+            Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-24 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -mr-48 -mt-48"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl -ml-48 -mb-48"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Our <span class="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">Purpose</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-blue-100 leading-relaxed">
+          We aspire to deliver value in global supply chains by living our values around people, partners and planet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Purpose Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          At Just A Click, value has tangible meaning and we strive to deliver value to our stakeholders with each and every interaction. We also live by our values of <strong class="text-gray-900">humility</strong>, <strong class="text-gray-900">entrepreneurship</strong> and <strong class="text-gray-900">family</strong> and they are at the core of our relationship with our people, our partners and our commitment to reduce the harmful impact of our industry on the planet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values Section -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Our <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Values</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our values form the basis of our culture, our brand and our business strategies. They define how we engage with our colleagues, with our customers and suppliers, our shareholders and the communities in which we live and work. Our values are the essence of who we are.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Humility -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-hands-helping text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">We value humility</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We have grown from humble beginnings to become a leading global supply chain orchestrator – helping brands and retailers around the world withstand disruption. Yet the humility that permeated the organization through its founders is still evident today.
+          </p>
+        </div>
+
+        <!-- Entrepreneurship -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-lightbulb text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">We value entrepreneurship</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Identifying the opportunity to meet customer needs in faraway markets, two entrepreneurs joined forces to source local products, creating Just A Click. That same entrepreneurial spirit of agility and simplicity is very much alive today and continues to drive the way we support our customers, suppliers, industry and communities to grow. We believe in keeping things simple so we can be agile with true entrepreneurial spirit. We look for opportunities for growth and embrace change as we constantly learn, try new things, and connect with new people for the benefit of our people and partners.
+          </p>
+        </div>
+
+        <!-- Family -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-users text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">We value family</h3>
+          <p class="text-gray-600 leading-relaxed">
+            People are at the core of what we do and always have been. We care about each other; and we care about creating a sustainable and inclusive future together. Trust and integrity are the cornerstones of all of this and the tremendous faith we put in our people translates to exceptional experiences for our customers. We are in it for the long term. We value long-lasting relationships with our partners – our people, suppliers, customers and communities. We strive to be the change we want to see, by creating a healthy and empowering workplace culture and by giving back to our communities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Partner with Us?</h2>
+      <p class="text-xl text-blue-100 mb-8">
+        Join us in creating sustainable value across global supply chains.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html"
+          class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          Get in Touch
+        </a>
+        <a href="about-us.html"
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+          Learn More About Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-300">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white duration-300">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-white duration-300">Who We Are</a></li>
+            <li><a href="services.html" class="hover:text-white duration-300">Our Services</a></li>
+            <li><a href="news.html" class="hover:text-white duration-300">Blog</a></li>
+            <li><a href="#" class="hover:text-white duration-300">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+          <ul class="space-y-2">
+            <li>Email: info@justaclick.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+        <p>© 2025 Just A Click. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-white duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-white duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
