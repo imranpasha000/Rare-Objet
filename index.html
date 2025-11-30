@@ -537,6 +537,7 @@
           text.setAttribute('y', point.y + 5);
           text.setAttribute('text-anchor', stage.angle <= 180 ? 'start' : 'end');
           text.setAttribute('transform', `rotate(90, ${point.x + (stage.angle <= 180 ? 25 : -25)}, ${point.y + 5})`);
+          text.setAttribute('fill', '#1f2937');
           text.textContent = stage.name;
 
           g.appendChild(circle);
@@ -1153,82 +1154,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Hero Section -->
-  <!-- <section class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid lg:grid-cols-2 gap-12 items-center"> -->
-  <!-- Left Column - Text/Story -->
-  <!-- <div class="space-y-6">
-            <h1 class="text-4xl lg:text-4xl font-bold text-gray-900 leading-tight">
-              Welcome to <span class="text-blue-900">Just A Click</span> – Your Complete Home Furnishing Partner
-            </h1>
-            <p class="text-xl text-gray-600 leading-relaxed">
-              From our own designs to sourcing, manufacturing, and global delivery – we handle every step of your home
-              furnishing journey with expertise and care.
-            </p>
-            <p class="text-lg text-gray-700 leading-relaxed">
-              Whether you're a buyer looking for unique pieces, a wholesaler seeking reliable suppliers, or a vendor
-              wanting to expand your reach, we provide end-to-end solutions that transform your vision into reality. Our
-              dedicated team of designers, manufacturers, and logistics experts work together to deliver exceptional
-              quality and service across the globe.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <button
-                class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105">
-                Get Started Today
-              </button>
-              <button
-                class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
-                Explore Our Designs
-              </button>
-            </div>
-          </div> -->
-
-  <!-- Right Column - Visual/Media -->
-  <!-- <div class="relative">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="space-y-4">
-                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                  <div
-                    class="w-full h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg mb-3 flex items-center justify-center">
-                    <i class="fas fa-palette text-white text-2xl"></i>
-                  </div>
-                  <h3 class="font-semibold text-gray-900">Designers Creating</h3>
-                  <p class="text-sm text-gray-600">Innovative home furnishing designs</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                  <div
-                    class="w-full h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-3 flex items-center justify-center">
-                    <i class="fas fa-cogs text-white text-2xl"></i>
-                  </div>
-                  <h3 class="font-semibold text-gray-900">Manufacturing</h3>
-                  <p class="text-sm text-gray-600">Quality production processes</p>
-                </div>
-              </div>
-              <div class="space-y-4 mt-8">
-                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                  <div
-                    class="w-full h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-3 flex items-center justify-center">
-                    <i class="fas fa-shipping-fast text-white text-2xl"></i>
-                  </div>
-                  <h3 class="font-semibold text-gray-900">Global Delivery</h3>
-                  <p class="text-sm text-gray-600">Worldwide shipping & logistics</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                  <div
-                    class="w-full h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-3 flex items-center justify-center">
-                    <i class="fas fa-handshake text-white text-2xl"></i>
-                  </div>
-                  <h3 class="font-semibold text-gray-900">Partnership</h3>
-                  <p class="text-sm text-gray-600">Trusted business relationships</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
-  <!-- </div>
-      </div>
-    </section> -->
 
   <!-- Get Started Section -->
   <section id="get-started" class="strategy-section">

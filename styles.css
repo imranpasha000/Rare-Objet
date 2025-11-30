@@ -647,9 +647,8 @@ nav img {
 .stage-point text {
   font-size: 14px;
   font-weight: 700;
-  fill: rgba(255, 255, 255, 0.9);
+  fill: #1f2937;
   pointer-events: none;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -1386,8 +1385,8 @@ nav img {
 
 @media (min-width: 1024px) {
   #team .strategy-cards {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
   }
 }
 
@@ -1408,10 +1407,15 @@ nav img {
 
 @media (min-width: 1024px) {
   #services .strategy-cards,
-  #why-we-exist .strategy-cards,
-  #get-started .strategy-cards {
+  #why-we-exist .strategy-cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+  }
+  
+  #get-started .strategy-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
   }
 }
 
@@ -1855,4 +1859,5 @@ footer .strategy-cards {
   .service-card-with-bg:hover .service-card-bg {
     opacity: 0.25;
   }
+}
 }
