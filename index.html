@@ -396,7 +396,8 @@
 
       <!-- Bottom Cards (Navigation) -->
       <div class="bottom-cards">
-        <div class="info-card active" data-tab="tab-orchestration">
+        <a href="we-manage-you-grow.html" target="_blank" class="info-card active"
+          style="text-decoration: none; color: inherit;">
           <div class="card-icon">
             <i class="fas fa-network-wired"></i>
           </div>
@@ -407,7 +408,7 @@
           <div class="card-arrow">
             <i class="fas fa-arrow-right"></i>
           </div>
-        </div>
+        </a>
         <div class="info-card" data-tab="tab-digital">
           <div class="card-icon">
             <i class="fas fa-cloud"></i>
@@ -482,8 +483,16 @@
       const tabContents = document.querySelectorAll('.tab-content');
 
       infoCards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+          // Skip if it's a link (anchor tag)
+          if (card.tagName === 'A' || card.closest('a')) {
+            return;
+          }
+
           const tabId = card.getAttribute('data-tab');
+          if (!tabId) return;
+
+          e.preventDefault();
 
           // Update active card
           infoCards.forEach(c => c.classList.remove('active'));
@@ -744,140 +753,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="strategy-section">
-    <div class="premium-bg-overlay"></div>
-    <div class="container">
-      <!-- Header -->
-      <div class="section-header">
-        <h2>We Manage <span class="gradient-text">You Grow</span></h2>
-        <p>Let's remove your production & design burdens from concept to delivery. Every detail is managed by us—you
-          focus on your growth.</p>
-      </div>
 
-      <!-- Services Cards -->
-      <div class="strategy-cards">
-        <!-- Service Card -->
-        <div class="strategy-card service-card-with-bg">
-          <div class="service-card-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80');">
-          </div>
-          <div class="card-glow"></div>
-          <div class="card-icon-wrapper">
-            <div class="icon-bg"></div>
-            <i class="fas fa-pencil-ruler"></i>
-          </div>
-          <div class="card-content-wrapper">
-            <div class="card-badge">Design</div>
-            <h3>IN-HOUSE PRODUCT DESIGN</h3>
-            <div class="card-divider"></div>
-            <p>Creative and innovative designs tailored to your specific needs and market demands.</p>
-          </div>
-        </div>
-
-        <!-- Service Card -->
-        <div class="strategy-card service-card-with-bg">
-          <div class="service-card-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80');">
-          </div>
-          <div class="card-glow"></div>
-          <div class="card-icon-wrapper">
-            <div class="icon-bg"></div>
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="card-content-wrapper">
-            <div class="card-badge">Sourcing</div>
-            <h3>SOURCING & PROCUREMENT</h3>
-            <div class="card-divider"></div>
-            <p>Expert sourcing of materials and components from verified suppliers worldwide.</p>
-          </div>
-        </div>
-
-        <!-- Service Card -->
-        <div class="strategy-card service-card-with-bg">
-          <div class="service-card-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80');">
-          </div>
-          <div class="card-glow"></div>
-          <div class="card-icon-wrapper">
-            <div class="icon-bg"></div>
-            <i class="fas fa-industry"></i>
-          </div>
-          <div class="card-content-wrapper">
-            <div class="card-badge">Production</div>
-            <h3>MANUFACTURING & PRODUCTION</h3>
-            <div class="card-divider"></div>
-            <p>Complete production management with quality control and timeline adherence.</p>
-          </div>
-        </div>
-
-        <!-- Service Card -->
-        <div class="strategy-card service-card-with-bg">
-          <div class="service-card-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80');">
-          </div>
-          <div class="card-glow"></div>
-          <div class="card-icon-wrapper">
-            <div class="icon-bg"></div>
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="card-content-wrapper">
-            <div class="card-badge">Quality</div>
-            <h3>QUALITY ASSURANCE</h3>
-            <div class="card-divider"></div>
-            <p>Rigorous quality checks and auditing to ensure the highest standards.</p>
-          </div>
-        </div>
-
-        <!-- Service Card -->
-        <div class="strategy-card service-card-with-bg">
-          <div class="service-card-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80');">
-          </div>
-          <div class="card-glow"></div>
-          <div class="card-icon-wrapper">
-            <div class="icon-bg"></div>
-            <i class="fas fa-cogs"></i>
-          </div>
-          <div class="card-content-wrapper">
-            <div class="card-badge">Custom</div>
-            <h3>CUSTOMIZATION</h3>
-            <div class="card-divider"></div>
-            <p>Tailored solutions and custom modifications to meet your specific requirements.</p>
-          </div>
-        </div>
-
-        <!-- Service Card -->
-        <div class="strategy-card service-card-with-bg">
-          <div class="service-card-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80');">
-          </div>
-          <div class="card-glow"></div>
-          <div class="card-icon-wrapper">
-            <div class="icon-bg"></div>
-            <i class="fas fa-globe"></i>
-          </div>
-          <div class="card-content-wrapper">
-            <div class="card-badge">Shipping</div>
-            <h3>GLOBAL SHIPPING</h3>
-            <div class="card-divider"></div>
-            <p>Worldwide logistics and delivery services to reach your customers anywhere.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 mt-12">
-        <button
-          class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-          Request a Quote
-        </button>
-        <button
-          class="border-2 border-blue-600 text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-          Explore Our Designs
-        </button>
-      </div>
-    </div>
-  </section>
 
   <!-- Products Section -->
   <section id="products" class="strategy-section">
@@ -1232,6 +1108,54 @@
     </div>
   </section>
 
+  <!-- Stats Section -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-12">
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-users text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number1">0</span>+
+          </h3>
+          <p class="text-gray-600 text-lg">Happy Clients</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-globe text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number2">0</span>+
+          </h3>
+          <p class="text-gray-600 text-lg">Countries Served</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-box text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number3">0</span>K+
+          </h3>
+          <p class="text-gray-600 text-lg">Products Delivered</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-star text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number4">0</span>%
+          </h3>
+          <p class="text-gray-600 text-lg">Customer Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer Section -->
   <footer class="bg-white text-gray-600 border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-6 py-12">
@@ -1295,7 +1219,66 @@
   </footer>
 
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    // jQuery Simple Counter Plugin
+    $.fn.jQuerySimpleCounter = function (options) {
+      var settings = $.extend({
+        start: 0,
+        end: 100,
+        easing: 'swing',
+        duration: 400,
+        complete: ''
+      }, options);
+
+      var thisElement = $(this);
+
+      $({ count: settings.start }).animate({ count: settings.end }, {
+        duration: settings.duration,
+        easing: settings.easing,
+        step: function () {
+          var mathCount = Math.ceil(this.count);
+          thisElement.text(mathCount);
+        },
+        complete: settings.complete
+      });
+    };
+
+    // Initialize counters when page loads
+    $(document).ready(function () {
+      // Check if element is in viewport before animating
+      function isInViewport(element) {
+        var elementTop = $(element).offset().top;
+        var elementBottom = elementTop + $(element).outerHeight();
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+      }
+
+      var hasAnimated = false;
+
+      function animateCounters() {
+        if (!hasAnimated && isInViewport($('#number1').closest('section'))) {
+          hasAnimated = true;
+          $('#number1').jQuerySimpleCounter({ end: 500, duration: 3000 });
+          $('#number2').jQuerySimpleCounter({ end: 50, duration: 3000 });
+          $('#number3').jQuerySimpleCounter({ end: 10, duration: 2000 });
+          $('#number4').jQuerySimpleCounter({ end: 99, duration: 2500 });
+        }
+      }
+
+      // Animate on page load
+      animateCounters();
+
+      // Also check on scroll (in case section is below fold)
+      $(window).on('scroll', function () {
+        if (!hasAnimated) {
+          animateCounters();
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
