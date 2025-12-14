@@ -255,74 +255,73 @@
       <!-- Tab Content Area -->
       <div class="tab-content-area">
 
-        <!-- Tab 1: Supply Chain Orchestration (Circle) -->
+        <!-- Tab 1: Supply Chain Orchestration (New Design) -->
         <div class="tab-content active" id="tab-orchestration">
-          <div class="content-grid">
-            <!-- Timeline Visualization -->
-            <div class="timeline-container">
-              <div class="timeline-wrapper">
-                <svg class="timeline-svg" viewBox="0 0 1000 480" id="timelineSvg" preserveAspectRatio="xMidYMid meet">
-                  <defs>
-                    <!-- Premium Gradients -->
-                    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
-                    </linearGradient>
-                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
-                    </linearGradient>
-                    <linearGradient id="activeNodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
-                      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
-                    </linearGradient>
-                    <!-- Premium Filters -->
-                    <filter id="glow-premium">
-                      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
-                      <feMerge>
-                        <feMergeNode in="coloredBlur" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                    <filter id="line-glow">
-                      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                      <feMerge>
-                        <feMergeNode in="coloredBlur" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                    <filter id="boom-effect">
-                      <feGaussianBlur stdDeviation="8" result="coloredBlur" />
-                      <feMerge>
-                        <feMergeNode in="coloredBlur" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                  </defs>
+          <div class="new-timeline-wrapper">
+            <!-- New Timeline Visualization -->
+            <div class="new-timeline-container">
+              <svg class="new-timeline-svg" viewBox="0 0 1200 500" id="newTimelineSvg"
+                preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <!-- Red Gradients for Heartbeat Pulse Nodes -->
+                  <linearGradient id="newNodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="newLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.9" />
+                    <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:0.9" />
+                  </linearGradient>
+                  <linearGradient id="newActiveNodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f87171;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#ef4444;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+                  </linearGradient>
+                  <!-- Enhanced Glow Filters -->
+                  <filter id="newGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="newLineGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="5" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="newHighlightGlow" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="10" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
 
-                  <!-- Connecting Lines (will be drawn progressively) -->
-                  <g id="timelineLines"></g>
+                <!-- Connecting Lines (will be drawn progressively) -->
+                <g id="newTimelineLines"></g>
 
-                  <!-- Stage Nodes (will be added by JS) -->
-                  <g id="timelineNodes"></g>
-                </svg>
-              </div>
+                <!-- Stage Nodes (will be added by JS) -->
+                <g id="newTimelineNodes"></g>
+              </svg>
             </div>
 
-            <!-- Content Display -->
-            <div class="content-display premium-content-display">
-              <div class="content-glow"></div>
-              <div class="content-inner">
-                <div class="stage-number premium-stage-number">
-                  <span class="stage-label">Stage</span>
-                  <span class="stage-value" id="stageNumber">01</span>
+            <!-- New Content Display -->
+            <div class="new-content-display">
+              <div class="new-content-glow"></div>
+              <div class="new-content-inner">
+                <div class="new-stage-number">
+                  <span class="new-stage-label">Stage</span>
+                  <span class="new-stage-value" id="newStageNumber">01</span>
                 </div>
-                <h3 id="stageTitle" class="premium-heading">Decoding Customer Requirements</h3>
-                <div class="content-divider premium-divider"></div>
-                <p id="stageDescription" class="premium-description">
+                <h3 id="newStageTitle" class="new-stage-heading">DECODING</h3>
+                <div class="new-content-divider"></div>
+                <p id="newStageDescription" class="new-stage-description">
                   We begin by thoroughly researching our customers and their developers to decode their requirements.
                   Through close coordination, we gain a deep understanding of their business nature, product quality
                   expectations, operational processes, team environment, target audience, and costing considerations.
@@ -331,8 +330,8 @@
                 </p>
               </div>
 
-              <!-- Stage Indicators -->
-              <div class="stage-indicators premium-indicators" id="indicators"></div>
+              <!-- New Stage Indicators -->
+              <div class="new-stage-indicators" id="newIndicators"></div>
             </div>
           </div>
         </div>
@@ -457,66 +456,66 @@
     </div>
 
     <script>
-      // Stage Data - Zig-zag Timeline positions (x, y coordinates)
-      const stages = [
+      // Stage Data - New Zig-zag Timeline positions (x, y coordinates)
+      const newStages = [
         {
-          name: 'Decoding',
-          title: 'Decoding Customer Requirements',
+          name: 'DECODING',
+          title: 'DECODING',
           description: 'We begin by thoroughly researching our customers and their developers to decode their requirements. Through close coordination, we gain a deep understanding of their business nature, product quality expectations, operational processes, team environment, target audience, and costing considerations. This holistic approach ensures that every solution we provide is precisely tailored, strategically aligned, and built for mutual success.',
-          x: 100,
-          y: 320  // Bottom
+          x: 120,
+          y: 380  // Bottom left
         },
         {
-          name: 'Design & Development',
-          title: 'Design & Development',
+          name: 'DESIGN & DEVELOPMENT',
+          title: 'DESIGN & DEVELOPMENT',
           description: 'After understanding the customer\'s requirements, we move on to design and development. We create innovative and practical solutions that match their vision, refining each design to ensure it meets their goals, day-to-day operations, and market needs - while keeping the process smooth and efficient.',
-          x: 280,
+          x: 320,
           y: 120  // Top (zig)
         },
         {
-          name: 'Quality Production',
-          title: 'Quality Production',
+          name: 'QUALITY PRODUCTION',
+          title: 'QUALITY PRODUCTION',
           description: 'Once all requirements are finalized, we select the most suitable manufacturers from our network of 100+ global partners - choosing those with relevant experience in the product category and adherence to our customers\' standards. This ensures the highest quality services are delivered seamlessly.',
-          x: 460,
-          y: 320  // Bottom (zag)
+          x: 520,
+          y: 380  // Bottom (zag)
         },
         {
-          name: 'Quality Assurance & Control',
-          title: 'Quality Assurance & Control',
+          name: 'QUALITY ASSURANCE & CONTROL',
+          title: 'QUALITY ASSURANCE & CONTROL',
           description: 'Our experienced in-house quality team oversees every step - from sampling to final production - ensuring each product meets the highest standards. Through thorough in-line checks and final inspections, we deliver consistent, reliable, and excellent results.',
-          x: 640,
+          x: 720,
           y: 120  // Top (zig)
         },
         {
-          name: 'Logistics and delivery',
-          title: 'Logistics and delivery',
+          name: 'LOGISTICS AND DELIVERY',
+          title: 'LOGISTICS AND DELIVERY',
           description: 'After production and quality checks, we take care of logistics and delivery. Our team carefully packs each product, ships it on time, and monitors it throughout the journey to ensure it reaches our customers safely and smoothly. By optimizing freight costs, tariffs, and import duties across shipments from different countries, we also help reduce expenses and maximize value for our customers.',
-          x: 820,
-          y: 320  // Bottom (zag)
+          x: 920,
+          y: 380  // Bottom (zag)
         },
         {
-          name: 'Launch with impact',
-          title: 'Launch with impact',
+          name: 'LAUNCH WITH IMPACT',
+          title: 'LAUNCH WITH IMPACT',
           description: 'Once the product is ready, we make sure it reaches the market with maximum impact. We work closely with our partners to position it right, create repeat opportunities, boost sales, and build strong, long-term relationships that benefit everyone involved.',
-          x: 900,
-          y: 120  // Top (zig)
+          x: 1080,
+          y: 120  // Top right (zig)
         }
       ];
 
       // State
-      let activeStage = 0;
-      let isAutoPlay = true;
-      let interval;
-      let nodesAppeared = false;
-      let linesDrawn = false;
+      let newActiveStage = 0;
+      let newIsAutoPlay = true;
+      let newInterval;
+      let newNodesAppeared = false;
+      let newLinesDrawn = false;
 
       // Elements
-      const stageTitle = document.getElementById('stageTitle');
-      const stageDescription = document.getElementById('stageDescription');
-      const stageNumber = document.getElementById('stageNumber');
-      const timelineNodesGroup = document.getElementById('timelineNodes');
-      const timelineLinesGroup = document.getElementById('timelineLines');
-      const indicatorsContainer = document.getElementById('indicators');
+      const newStageTitle = document.getElementById('newStageTitle');
+      const newStageDescription = document.getElementById('newStageDescription');
+      const newStageNumber = document.getElementById('newStageNumber');
+      const newTimelineNodesGroup = document.getElementById('newTimelineNodes');
+      const newTimelineLinesGroup = document.getElementById('newTimelineLines');
+      const newIndicatorsContainer = document.getElementById('newIndicators');
 
       // Tab Navigation
       const infoCards = document.querySelectorAll('.info-card');
@@ -544,336 +543,378 @@
 
           // Reset timeline animation if switching to orchestration tab
           if (tabId === 'tab-orchestration') {
-            activeStage = 0;
-            updateUI();
-            if (isAutoPlay) {
-              stopAutoPlay();
-              startAutoPlay();
+            newActiveStage = 0;
+            newUpdateUI();
+            if (newIsAutoPlay) {
+              newStopAutoPlay();
+              newStartAutoPlay();
             }
           }
         });
       });
 
-      // Create timeline nodes
-      function createTimelineNodes() {
-        stages.forEach((stage, index) => {
+      // Create new timeline nodes
+      function newCreateTimelineNodes() {
+        newStages.forEach((stage, index) => {
           const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-          g.classList.add('timeline-node');
+          g.classList.add('new-timeline-node');
           g.setAttribute('data-index', index);
           g.style.opacity = '0';
           g.style.transform = 'scale(0)';
-          g.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          g.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          g.style.zIndex = '1';
 
-          // Elegant circular marker with gradient (no numbers)
+          // Glowing circular node with enhanced gradient
           const outerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
           outerCircle.setAttribute('cx', stage.x);
           outerCircle.setAttribute('cy', stage.y);
-          outerCircle.setAttribute('r', '10');
-          outerCircle.setAttribute('fill', 'url(#nodeGradient)');
-          outerCircle.setAttribute('stroke', 'url(#nodeGradient)');
-          outerCircle.setAttribute('stroke-width', '2.5');
-          outerCircle.setAttribute('filter', 'url(#glow-premium)');
-          outerCircle.setAttribute('class', 'elegant-marker');
+          outerCircle.setAttribute('r', '12');
+          outerCircle.setAttribute('fill', 'url(#newNodeGradient)');
+          outerCircle.setAttribute('stroke', 'url(#newNodeGradient)');
+          outerCircle.setAttribute('stroke-width', '3');
+          outerCircle.setAttribute('filter', 'url(#newGlow)');
+          outerCircle.setAttribute('class', 'new-node-circle');
 
-          // Inner highlight circle for depth
+          // Inner highlight circle
           const innerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
           innerCircle.setAttribute('cx', stage.x);
           innerCircle.setAttribute('cy', stage.y);
-          innerCircle.setAttribute('r', '5');
+          innerCircle.setAttribute('r', '6');
           innerCircle.setAttribute('fill', '#ffffff');
-          innerCircle.setAttribute('opacity', '0.4');
+          innerCircle.setAttribute('opacity', '0.5');
 
-          // Creative process heading label - alternating above and below with proper spacing
+          // Label text - alternating above and below
+          const labelY = index % 2 === 0 ? stage.y - 50 : stage.y + 50;
           const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-          // Alternate: even index = above, odd index = below
-          // Increased spacing to prevent overlap: 45px above, 40px below
-          const labelY = index % 2 === 0 ? stage.y - 45 : stage.y + 40;
           label.setAttribute('x', stage.x);
           label.setAttribute('y', labelY);
           label.setAttribute('text-anchor', 'middle');
-          label.setAttribute('font-size', '12');
+          label.setAttribute('font-size', '13');
           label.setAttribute('font-weight', '900');
-          label.setAttribute('fill', '#000000');
-          label.setAttribute('letter-spacing', '0.3px');
-          label.setAttribute('class', 'process-label');
+          label.setAttribute('fill', '#1a1a1a');
+          label.setAttribute('letter-spacing', '0.5px');
+          label.setAttribute('class', 'new-process-label');
           label.setAttribute('font-family', 'Arial, sans-serif');
           label.setAttribute('dominant-baseline', 'middle');
           label.textContent = stage.name;
 
-          // Add background rectangle for better text visibility with proper sizing
-          const textWidth = Math.max(stage.name.length * 7.5, 100);
+          // Rounded rectangle background for label
+          const textWidth = Math.max(stage.name.length * 8.5, 140);
           const textBg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-          textBg.setAttribute('x', stage.x - textWidth / 2 - 12);
-          textBg.setAttribute('y', labelY - 11);
-          textBg.setAttribute('width', textWidth + 24);
-          textBg.setAttribute('height', '22');
-          textBg.setAttribute('rx', '11');
+          textBg.setAttribute('x', stage.x - textWidth / 2 - 14);
+          textBg.setAttribute('y', labelY - 13);
+          textBg.setAttribute('width', textWidth + 28);
+          textBg.setAttribute('height', '26');
+          textBg.setAttribute('rx', '13');
           textBg.setAttribute('fill', 'rgba(255, 255, 255, 0.98)');
-          textBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.1)');
-          textBg.setAttribute('stroke-width', '1');
-          textBg.setAttribute('filter', 'url(#glow-premium)');
-          textBg.setAttribute('class', 'label-background');
+          textBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.12)');
+          textBg.setAttribute('stroke-width', '1.5');
+          textBg.setAttribute('class', 'new-label-background');
 
-          // Insert background before label
+          // Insert elements in order
           g.appendChild(textBg);
-
           g.appendChild(outerCircle);
           g.appendChild(innerCircle);
           g.appendChild(label);
-          timelineNodesGroup.appendChild(g);
+          newTimelineNodesGroup.appendChild(g);
 
           // Click handler
           g.addEventListener('click', () => {
-            setActiveStage(index);
-            isAutoPlay = false;
-            stopAutoPlay();
+            newSetActiveStage(index);
+            newIsAutoPlay = false;
+            newStopAutoPlay();
           });
 
           // Animate node appearance
           setTimeout(() => {
             g.style.opacity = '1';
             g.style.transform = 'scale(1)';
-          }, index * 200);
+          }, index * 250);
         });
 
         // After all nodes appear, draw lines
         setTimeout(() => {
-          nodesAppeared = true;
-          drawTimelineLines();
-        }, stages.length * 200 + 300);
+          newNodesAppeared = true;
+          newDrawTimelineLines();
+        }, newStages.length * 250 + 400);
       }
 
       // Draw connecting lines progressively
-      function drawTimelineLines() {
-        for (let i = 0; i < stages.length - 1; i++) {
-          const start = stages[i];
-          const end = stages[i + 1];
+      function newDrawTimelineLines() {
+        for (let i = 0; i < newStages.length - 1; i++) {
+          const start = newStages[i];
+          const end = newStages[i + 1];
 
-          // Creative motion line with gradient
+          // Glowing zig-zag line with gradient
           const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line.setAttribute('x1', start.x);
           line.setAttribute('y1', start.y);
           line.setAttribute('x2', end.x);
           line.setAttribute('y2', end.y);
-          line.setAttribute('stroke', 'url(#lineGradient)');
-          line.setAttribute('stroke-width', '4');
+          line.setAttribute('stroke', 'url(#newLineGradient)');
+          line.setAttribute('stroke-width', '5');
           line.setAttribute('stroke-linecap', 'round');
-          line.setAttribute('filter', 'url(#line-glow)');
+          line.setAttribute('filter', 'url(#newLineGlow)');
           line.setAttribute('opacity', '0');
-          line.setAttribute('class', 'creative-motion-line');
+          line.setAttribute('class', 'new-timeline-line');
 
           const totalLength = Math.sqrt(Math.pow(end.x - start.x, 2) + Math.pow(end.y - start.y, 2));
           line.style.strokeDasharray = totalLength;
           line.style.strokeDashoffset = totalLength;
-          line.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-out';
+          line.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-out';
 
-          timelineLinesGroup.appendChild(line);
+          newTimelineLinesGroup.appendChild(line);
 
-          // Animate line drawing with creative motion
+          // Animate line drawing
           setTimeout(() => {
             line.setAttribute('opacity', '1');
             line.style.strokeDashoffset = '0';
 
-            // If this is the last line, trigger boom effect
-            if (i === stages.length - 2) {
+            // If this is the last line, mark as drawn
+            if (i === newStages.length - 2) {
               setTimeout(() => {
-                createBoomEffect(end.x, end.y);
-                linesDrawn = true;
-              }, 1200);
+                newLinesDrawn = true;
+              }, 1500);
             }
-          }, i * 900 + 600);
-        }
-      }
-
-      // Create boom effect at final node
-      function createBoomEffect(x, y) {
-        const finalNode = timelineNodesGroup.querySelector(`[data-index="${stages.length - 1}"]`);
-        if (finalNode) {
-          finalNode.style.animation = 'boomPulse 0.6s ease-out';
-
-          // Create expanding circles for premium boom effect
-          for (let i = 0; i < 3; i++) {
-            const boomCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            boomCircle.setAttribute('cx', x);
-            boomCircle.setAttribute('cy', y);
-            boomCircle.setAttribute('r', '12');
-            boomCircle.setAttribute('fill', 'none');
-            boomCircle.setAttribute('stroke', 'url(#lineGradient)');
-            boomCircle.setAttribute('stroke-width', '2.5');
-            boomCircle.setAttribute('opacity', '0.8');
-            boomCircle.setAttribute('filter', 'url(#glow-premium)');
-            boomCircle.style.animation = `boomExpand 1.2s ease-out ${i * 0.25}s forwards`;
-            timelineNodesGroup.appendChild(boomCircle);
-          }
+          }, i * 1000 + 700);
         }
       }
 
       // Create indicators
-      function createIndicators() {
-        stages.forEach((stage, index) => {
+      function newCreateIndicators() {
+        newStages.forEach((stage, index) => {
           const indicator = document.createElement('div');
-          indicator.classList.add('indicator');
+          indicator.classList.add('new-indicator');
           indicator.setAttribute('data-index', index);
           indicator.addEventListener('click', () => {
-            setActiveStage(index);
-            isAutoPlay = false;
-            stopAutoPlay();
+            newSetActiveStage(index);
+            newIsAutoPlay = false;
+            newStopAutoPlay();
           });
-          indicatorsContainer.appendChild(indicator);
+          newIndicatorsContainer.appendChild(indicator);
         });
       }
 
       // Update active stage
-      function setActiveStage(index) {
-        activeStage = index;
-        updateUI();
+      function newSetActiveStage(index) {
+        newActiveStage = index;
+        newUpdateUI();
       }
 
       // Update UI
-      function updateUI() {
+      function newUpdateUI() {
         // Update content
-        stageTitle.textContent = stages[activeStage].title;
-        stageDescription.textContent = stages[activeStage].description;
-        stageNumber.textContent = String(activeStage + 1).padStart(2, '0');
+        newStageTitle.textContent = newStages[newActiveStage].title;
+        newStageDescription.textContent = newStages[newActiveStage].description;
+        newStageNumber.textContent = String(newActiveStage + 1).padStart(2, '0');
 
-        // Update timeline nodes with premium styling
-        const nodes = document.querySelectorAll('.timeline-node');
+        // Update timeline nodes
+        const nodes = document.querySelectorAll('.new-timeline-node');
         nodes.forEach((node, index) => {
-          const circle = node.querySelector('.elegant-marker');
-          const innerCircle = node.querySelector('circle:not(.elegant-marker)');
-          const label = node.querySelector('.process-label');
-          const labelBg = node.querySelector('.label-background');
-          const stage = stages[index];
+          const circle = node.querySelector('.new-node-circle');
+          const innerCircle = node.querySelector('circle:not(.new-node-circle)');
+          const label = node.querySelector('.new-process-label');
+          const labelBg = node.querySelector('.new-label-background');
 
-          if (index === activeStage) {
-            node.classList.add('active');
+          if (index === newActiveStage) {
+            node.classList.add('new-active');
             if (circle) {
-              circle.setAttribute('r', '14');
-              circle.setAttribute('fill', 'url(#activeNodeGradient)');
-              circle.setAttribute('stroke', 'url(#activeNodeGradient)');
-              circle.style.filter = 'url(#glow-premium) drop-shadow(0 0 20px rgba(59, 130, 246, 0.8))';
+              circle.setAttribute('r', '16');
+              circle.setAttribute('fill', 'url(#newActiveNodeGradient)');
+              circle.setAttribute('stroke', 'url(#newActiveNodeGradient)');
+              circle.setAttribute('filter', 'url(#newHighlightGlow)');
             }
             if (innerCircle) {
-              innerCircle.setAttribute('r', '7');
-              innerCircle.setAttribute('opacity', '0.6');
+              innerCircle.setAttribute('r', '8');
+              innerCircle.setAttribute('opacity', '0.7');
             }
             if (label) {
+              label.setAttribute('font-size', '15');
               label.setAttribute('font-weight', '900');
-              label.setAttribute('fill', '#000000');
-              label.setAttribute('font-size', '14');
+              label.setAttribute('fill', '#1a1a1a');
             }
             if (labelBg) {
               labelBg.setAttribute('fill', 'rgba(255, 255, 255, 1)');
-              labelBg.setAttribute('stroke', 'rgba(59, 130, 246, 0.4)');
+              labelBg.setAttribute('stroke', 'rgba(99, 102, 241, 0.5)');
               labelBg.setAttribute('stroke-width', '2');
+              labelBg.setAttribute('filter', 'url(#newGlow)');
             }
-          } else if (index < activeStage) {
-            node.classList.remove('active');
+          } else if (index < newActiveStage) {
+            node.classList.remove('new-active');
             if (circle) {
-              circle.setAttribute('r', '10');
-              circle.setAttribute('fill', 'url(#nodeGradient)');
-              circle.setAttribute('stroke', 'url(#nodeGradient)');
-              circle.style.filter = 'url(#glow-premium)';
+              circle.setAttribute('r', '12');
+              circle.setAttribute('fill', 'url(#newNodeGradient)');
+              circle.setAttribute('stroke', 'url(#newNodeGradient)');
+              circle.setAttribute('filter', 'url(#newGlow)');
             }
             if (innerCircle) {
-              innerCircle.setAttribute('r', '5');
-              innerCircle.setAttribute('opacity', '0.4');
+              innerCircle.setAttribute('r', '6');
+              innerCircle.setAttribute('opacity', '0.5');
             }
             if (label) {
-              label.setAttribute('font-weight', '900');
-              label.setAttribute('fill', '#000000');
               label.setAttribute('font-size', '13');
+              label.setAttribute('font-weight', '900');
+              label.setAttribute('fill', '#1a1a1a');
             }
             if (labelBg) {
               labelBg.setAttribute('fill', 'rgba(255, 255, 255, 0.98)');
-              labelBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.1)');
-              labelBg.setAttribute('stroke-width', '1');
+              labelBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.12)');
+              labelBg.setAttribute('stroke-width', '1.5');
+              labelBg.setAttribute('filter', 'none');
             }
           } else {
-            node.classList.remove('active');
+            node.classList.remove('new-active');
             if (circle) {
-              circle.setAttribute('r', '10');
-              circle.setAttribute('fill', 'url(#nodeGradient)');
-              circle.setAttribute('stroke', 'url(#nodeGradient)');
-              circle.style.filter = 'url(#glow-premium)';
+              circle.setAttribute('r', '12');
+              circle.setAttribute('fill', 'url(#newNodeGradient)');
+              circle.setAttribute('stroke', 'url(#newNodeGradient)');
+              circle.setAttribute('filter', 'url(#newGlow)');
             }
             if (innerCircle) {
-              innerCircle.setAttribute('r', '5');
+              innerCircle.setAttribute('r', '6');
               innerCircle.setAttribute('opacity', '0.3');
             }
             if (label) {
-              label.setAttribute('font-weight', '900');
-              label.setAttribute('fill', '#000000');
               label.setAttribute('font-size', '13');
+              label.setAttribute('font-weight', '900');
+              label.setAttribute('fill', '#1a1a1a');
             }
             if (labelBg) {
               labelBg.setAttribute('fill', 'rgba(255, 255, 255, 0.95)');
               labelBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.08)');
-              labelBg.setAttribute('stroke-width', '1');
+              labelBg.setAttribute('stroke-width', '1.5');
+              labelBg.setAttribute('filter', 'none');
             }
           }
         });
 
         // Update indicators
-        const indicators = document.querySelectorAll('.indicator');
+        const indicators = document.querySelectorAll('.new-indicator');
         indicators.forEach((indicator, index) => {
-          indicator.classList.remove('active', 'passed');
-          if (index === activeStage) {
-            indicator.classList.add('active');
-          } else if (index < activeStage) {
-            indicator.classList.add('passed');
+          indicator.classList.remove('new-active', 'new-passed');
+          if (index === newActiveStage) {
+            indicator.classList.add('new-active');
+          } else if (index < newActiveStage) {
+            indicator.classList.add('new-passed');
           }
         });
       }
 
-      // Auto-play - starts at Decoding (0) and ends at Launch with impact (5)
-      function startAutoPlay() {
-        // Reset to first stage
-        activeStage = 0;
-        updateUI();
+      // Auto-play
+      function newStartAutoPlay() {
+        newActiveStage = 0;
+        newUpdateUI();
 
-        interval = setInterval(() => {
-          if (activeStage < stages.length - 1) {
-            activeStage = activeStage + 1;
-            updateUI();
-
-            // Trigger boom effect when reaching the last stage
-            if (activeStage === stages.length - 1) {
-              setTimeout(() => {
-                const finalStage = stages[activeStage];
-                createBoomEffect(finalStage.x, finalStage.y);
-                stopAutoPlay();
-              }, 500);
-            }
+        newInterval = setInterval(() => {
+          if (newActiveStage < newStages.length - 1) {
+            newActiveStage = newActiveStage + 1;
+            newUpdateUI();
           } else {
-            // Reached the last stage (Launch with impact), stop auto-play
-            stopAutoPlay();
+            newStopAutoPlay();
           }
-        }, 2000);
+        }, 2500);
       }
 
-      function stopAutoPlay() {
-        clearInterval(interval);
+      function newStopAutoPlay() {
+        clearInterval(newInterval);
+      }
+
+      // Sequential heartbeat pulse - wave effect from left to right with z-index
+      let currentPulsingNode = 0;
+
+      function startSequentialPulse() {
+        // Remove pulse from all nodes first
+        const allNodes = document.querySelectorAll('.new-timeline-node');
+        allNodes.forEach((node, index) => {
+          const circle = node.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'none';
+          }
+          // Set initial z-index based on position
+          node.style.zIndex = String(index + 1);
+        });
+
+        // Start pulsing from first node
+        currentPulsingNode = 0;
+        pulseNextNode();
+      }
+
+      function pulseNextNode() {
+        const allNodes = document.querySelectorAll('.new-timeline-node');
+
+        // Remove pulse from all nodes and update z-index
+        allNodes.forEach((node, index) => {
+          const circle = node.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'none';
+          }
+          // Set z-index: current node highest, previous nodes lower, future nodes lowest
+          if (index === currentPulsingNode) {
+            node.style.zIndex = '100';
+          } else if (index < currentPulsingNode) {
+            node.style.zIndex = String(50 + index);
+          } else {
+            node.style.zIndex = String(index + 1);
+          }
+        });
+
+        // Add pulse to current node and show its content
+        if (currentPulsingNode < allNodes.length) {
+          // Update active stage to show current node's content
+          newSetActiveStage(currentPulsingNode);
+
+          const currentNode = allNodes[currentPulsingNode];
+          const circle = currentNode.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'heartbeatPulse 1.5s ease infinite';
+          }
+
+          // Move to next node after showing for a duration
+          setTimeout(() => {
+            if (circle) {
+              circle.style.animation = 'none';
+            }
+            currentPulsingNode++;
+            if (currentPulsingNode < allNodes.length) {
+              pulseNextNode();
+            } else {
+              // Restart from beginning
+              currentPulsingNode = 0;
+              setTimeout(() => pulseNextNode(), 1000);
+            }
+          }, 2500);
+        }
+      }
+
+      function stopSequentialPulse() {
+        const allNodes = document.querySelectorAll('.new-timeline-node');
+        allNodes.forEach(node => {
+          const circle = node.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'none';
+          }
+        });
+        currentPulsingNode = 0;
       }
 
       // Initialize
-      createTimelineNodes();
-      createIndicators();
-      updateUI();
+      newCreateTimelineNodes();
+      newCreateIndicators();
+      newUpdateUI();
 
-      // Start auto-play after nodes and lines are drawn
+      // Start sequential pulse after nodes and lines are drawn (no auto-play)
       setTimeout(() => {
-        if (linesDrawn) {
-          startAutoPlay();
+        if (newLinesDrawn) {
+          startSequentialPulse();
         } else {
           const checkInterval = setInterval(() => {
-            if (linesDrawn) {
+            if (newLinesDrawn) {
               clearInterval(checkInterval);
-              startAutoPlay();
+              startSequentialPulse();
             }
           }, 100);
         }
-      }, stages.length * 200 + (stages.length - 1) * 800 + 2000);
+      }, newStages.length * 250 + (newStages.length - 1) * 1000 + 2500);
     </script>
   </section>
 
@@ -1195,8 +1236,8 @@
     </div>
   </section>
 
-   <!-- Stats Section -->
-   <section class="strategy-section">
+  <!-- Stats Section -->
+  <section class="strategy-section">
     <div class="premium-bg-overlay"></div>
     <div class="container">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-12">
