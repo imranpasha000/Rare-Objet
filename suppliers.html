@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suppliers - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+      <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <img src="Logo/Logo.jpg" alt="Logo"
+                class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-red-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-1">
+            <a href="index.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Why We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+            <div class="relative group">
+              <button class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div
+                class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div class="py-2">
+                  <a href="esg-strategy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply Chain Innovation</a>
+                  <a href="investors.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+                  <a href="media.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+                  <a href="suppliers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+                  <a href="careers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-lg">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Why We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">About Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply Chain Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md">
+            Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-red-50 to-indigo-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <span class="text-red-600">Suppliers</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Partner with Just A Click and become part of our global supply chain network. We work with suppliers who share
+          our commitment to quality, sustainability, and ethical practices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supplier Overview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Supplier Overview</h2>
+        <p class="text-xl text-gray-600">Join our network of trusted suppliers worldwide</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-globe text-red-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Network</h3>
+          <p class="text-gray-600">5,000+ suppliers across 50+ countries</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-handshake text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Long-term Partnerships</h3>
+          <p class="text-gray-600">Average partnership duration of 8+ years</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Standards</h3>
+          <p class="text-gray-600">99.5% quality compliance rate</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-leaf text-yellow-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Sustainability</h3>
+          <p class="text-gray-600">100% ESG compliance requirement</p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-red-50 to-indigo-50 rounded-lg p-8">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Why Partner with Just A Click?</h3>
+            <p class="text-lg text-gray-600 mb-6">
+              As a Just A Click supplier, you'll benefit from our global reach, stable demand, and commitment to
+              long-term partnerships.
+              We provide support for capacity building, quality improvement, and sustainable business practices.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-600 mr-3"></i>
+                <span class="text-gray-700">Stable, long-term business relationships</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-600 mr-3"></i>
+                <span class="text-gray-700">Support for capacity building and development</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-600 mr-3"></i>
+                <span class="text-gray-700">Access to global markets and customers</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-600 mr-3"></i>
+                <span class="text-gray-700">Collaboration on sustainability initiatives</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">Supplier Benefits</h4>
+            <div class="space-y-4">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Payment Terms</span>
+                <span class="font-semibold text-green-600">30-60 days</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Minimum Order</span>
+                <span class="font-semibold text-red-600">Flexible</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Quality Support</span>
+                <span class="font-semibold text-purple-600">24/7</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Training Programs</span>
+                <span class="font-semibold text-yellow-600">Free</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supply Chain Policy -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Supply Chain Policy</h2>
+        <p class="text-xl text-gray-600">Our commitment to ethical and sustainable supply chain practices</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Policy Framework</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Just A Click is committed to maintaining the highest standards of ethical conduct, environmental
+            responsibility,
+            and social accountability throughout our supply chain. Our policies ensure that all suppliers meet our
+            rigorous standards for quality, sustainability, and ethical practices.
+          </p>
+
+          <div class="space-y-6">
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+              <h4 class="text-xl font-semibold text-gray-900 mb-3">Code of Conduct</h4>
+              <p class="text-gray-600 mb-4">All suppliers must adhere to our comprehensive code of conduct covering
+                labor practices, environmental standards, and business ethics.</p>
+              <button class="text-red-600 hover:text-red-800 font-semibold">Download PDF →</button>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+              <h4 class="text-xl font-semibold text-gray-900 mb-3">Environmental Standards</h4>
+              <p class="text-gray-600 mb-4">Suppliers must demonstrate commitment to environmental protection, waste
+                reduction, and sustainable manufacturing practices.</p>
+              <button class="text-red-600 hover:text-red-800 font-semibold">Download PDF →</button>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+              <h4 class="text-xl font-semibold text-gray-900 mb-3">Labor Standards</h4>
+              <p class="text-gray-600 mb-4">We require suppliers to maintain fair labor practices, provide safe working
+                conditions, and respect human rights.</p>
+              <button class="text-red-600 hover:text-red-800 font-semibold">Download PDF →</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Compliance Requirements</h3>
+          <div class="space-y-6">
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-check-circle text-red-600 text-xl"></i>
+                </div>
+                <h4 class="text-lg font-semibold text-gray-900">Quality Certification</h4>
+              </div>
+              <p class="text-gray-600">ISO 9001:2015 quality management system certification required.</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-leaf text-green-600 text-xl"></i>
+                </div>
+                <h4 class="text-lg font-semibold text-gray-900">Environmental Certification</h4>
+              </div>
+              <p class="text-gray-600">ISO 14001:2015 environmental management system certification preferred.</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-users text-purple-600 text-xl"></i>
+                </div>
+                <h4 class="text-lg font-semibold text-gray-900">Social Compliance</h4>
+              </div>
+              <p class="text-gray-600">SA8000 or equivalent social accountability certification required.</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-shield-alt text-yellow-600 text-xl"></i>
+                </div>
+                <h4 class="text-lg font-semibold text-gray-900">Security Standards</h4>
+              </div>
+              <p class="text-gray-600">C-TPAT or equivalent supply chain security certification required.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supplier Onboarding -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Supplier Onboarding Process</h2>
+        <p class="text-xl text-gray-600">How to become a Just A Click supplier</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-red-200"></div>
+
+        <div class="space-y-12">
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-2xl font-bold text-red-600 mb-2">Step 1</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Initial Application</h3>
+                <p class="text-gray-600">Submit your company information and capabilities through our online portal.</p>
+              </div>
+            </div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">1
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">2
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-2xl font-bold text-red-600 mb-2">Step 2</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Capability Assessment</h3>
+                <p class="text-gray-600">Our team evaluates your manufacturing capabilities, quality systems, and
+                  capacity.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-2xl font-bold text-red-600 mb-2">Step 3</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Compliance Review</h3>
+                <p class="text-gray-600">Verification of certifications, policies, and compliance with our standards.
+                </p>
+              </div>
+            </div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">3
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">4
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-2xl font-bold text-red-600 mb-2">Step 4</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Site Audit</h3>
+                <p class="text-gray-600">On-site inspection of facilities, processes, and quality systems.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="text-2xl font-bold text-red-600 mb-2">Step 5</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Partnership Agreement</h3>
+                <p class="text-gray-600">Final approval and signing of supplier partnership agreement.</p>
+              </div>
+            </div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">5
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supplier Resources -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Supplier Resources</h2>
+        <p class="text-xl text-gray-600">Tools and resources to help you succeed as a Just A Click supplier</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-red-200 to-red-400 flex items-center justify-center">
+            <i class="fas fa-book text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Supplier Handbook</h3>
+            <p class="text-gray-600 mb-4">Comprehensive guide covering policies, procedures, and best practices.</p>
+            <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+              Download
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-green-200 to-green-400 flex items-center justify-center">
+            <i class="fas fa-graduation-cap text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Training Programs</h3>
+            <p class="text-gray-600 mb-4">Online and on-site training programs for quality, sustainability, and
+              compliance.</p>
+            <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-purple-200 to-purple-400 flex items-center justify-center">
+            <i class="fas fa-laptop text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Supplier Portal</h3>
+            <p class="text-gray-600 mb-4">Online platform for orders, payments, and communication.</p>
+            <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+              Access Portal
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-yellow-200 to-yellow-400 flex items-center justify-center">
+            <i class="fas fa-chart-line text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Performance Dashboard</h3>
+            <p class="text-gray-600 mb-4">Track your performance metrics and improvement opportunities.</p>
+            <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+              View Dashboard
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-red-200 to-red-400 flex items-center justify-center">
+            <i class="fas fa-headset text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Support Center</h3>
+            <p class="text-gray-600 mb-4">24/7 support for technical issues, questions, and assistance.</p>
+            <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+              Contact Support
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="h-48 bg-gradient-to-br from-indigo-200 to-indigo-400 flex items-center justify-center">
+            <i class="fas fa-users text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Supplier Community</h3>
+            <p class="text-gray-600 mb-4">Connect with other suppliers, share best practices, and collaborate.</p>
+            <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+              Join Community
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-red-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Ready to Become a Supplier?</h2>
+      <p class="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
+        Join our global network of trusted suppliers and help us deliver exceptional home furnishing solutions
+        worldwide.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+          Apply Now
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition duration-300">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Get in Touch Section - Loaded from component -->
+  <div data-component="components/get-in-touch.html"></div>
+
+  <!-- Footer Section -->
+  <footer class="bg-white text-gray-600 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm text-gray-600">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Home</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Who We Are</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Blog</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-red-600 duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-red-600 duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="components/component-loader.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

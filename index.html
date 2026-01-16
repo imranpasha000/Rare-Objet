@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just A Click - The Supply Chain of the Future</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="Logo/favicon/favicon.ico">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white overflow-x-hidden">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-3 min-h-[80px] sm:min-h-[90px] md:min-h-[100px]">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">Just A Click
+              </h1>
+              <p class="text-[10px] sm:text-xs md:text-sm text-red-900 font-medium mt-0.5 leading-tight">And Lets Grow
+                Together</p>
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-red-900 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-1">
+            <a href="index.html"
+              class="text-gray-900 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-red-50">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Why
+              We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">About
+              Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+            <div class="relative group">
+              <button
+                class="text-gray-500 hover:text-red-900 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div
+                class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div class="py-2">
+                  <a href="esg-strategy.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">ESG
+                    Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Supply
+                    Chain Innovation</a>
+                  <a href="investors.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Investors</a>
+                  <a href="media.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Media</a>
+                  <a href="suppliers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Suppliers</a>
+                  <a href="careers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-lg">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-red-50 text-red-900">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Why
+          We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">About
+          Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">ESG
+            Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Supply
+            Chain Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-900 transition-colors">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-md">
+            Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="relative w-full min-h-screen overflow-hidden flex items-center justify-center pt-16">
+
+    <!-- YouTube FULL Background -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <iframe
+        class="absolute top-1/2 left-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        src="https://www.youtube.com/embed/fNxjNFiwxiA?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=fNxjNFiwxiA"
+        frameborder="0" allow="autoplay; encrypted-media; fullscreen"></iframe>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center text-white px-4 sm:px-6 py-8 sm:py-12">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 animate-fade-in-up px-2">
+        Creating <span class="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">the
+          supply chain
+          of the future</span>
+      </h1>
+      <p
+        class="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-red-100 font-medium mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
+        We Design, Manufacture & Deliver Worldwide
+      </p>
+      <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+        <a href="#start"
+          class="bg-gradient-to-r from-red-500 to-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 transform hover:-translate-y-1 hover:scale-105">
+          Get Started
+        </a>
+        <a href="#designs"
+          class="border-2 border-white/90 bg-white/10 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-red-900 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105">
+          Explore
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Our Strategy Section -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Our <span class="gradient-text">Strategy for Excellence</span></h2>
+        <p>We integrate at every stage to enhance transparency and optimize performance. Consistency and accountability
+          guide our teams, while collaboration ensures tasks are completed efficiently. Respecting time is key—every
+          project moves securely and safely without compromising quality.</p>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="strategy-cards">
+        <!-- OUR COMMITMENT -->
+        <a href="our-commitment.html" class="strategy-card strategy-card-link">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>OUR COMMITMENT</h3>
+            <div class="card-divider"></div>
+            <!-- <p class="mb-3">Our commitment is to provide complete peace of mind through:</p> -->
+            <ul class="list-disc list-inside space-y-2 text-gray-700">
+              <li>Transparency, Trustworthy & customer friendly.</li>
+              <li>Maintain Quality & Services.
+              </li>
+              <li>Custom Solutions.
+              </li>
+              <li>Environmental commitment.</li>
+            </ul>
+            <div class="card-arrow-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- OUR PURPOSE -->
+        <a href="our-purpose.html" class="strategy-card strategy-card-link">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <div class="bullseye-emoji-container">
+              <picture>
+                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3af/512.webp" type="image/webp">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3af/512.gif" alt="🎯" width="48" height="48" class="bullseye-emoji">
+              </picture>
+            </div>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>OUR PURPOSE</h3>
+            <div class="card-divider"></div>
+            <ul class="list-disc list-inside space-y-2 text-gray-700">
+              <li>We value Humility.</li>
+              <li>We value Entrepreneurship.</li>
+              <li>We value family.</li>
+            </ul>
+            <div class="card-arrow-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supply Chain Orchestration Section -->
+  <section class="supply-chain-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Supply Chain <span class="gradient-text">Workflow</span></h2>
+        <p>Explore our supply chain workflow below to see how every step is crafted for your success. Discover why you
+          need Just A Click for effortless growth and lasting results for your company.</p>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="tab-content-area">
+
+        <!-- Tab 1: Supply Chain Orchestration (New Design) -->
+        <div class="tab-content active" id="tab-orchestration">
+          <div class="new-timeline-wrapper">
+            <!-- New Timeline Visualization -->
+            <div class="new-timeline-container">
+              <svg class="new-timeline-svg" viewBox="0 0 1200 500" id="newTimelineSvg"
+                preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <!-- Red Gradients for Heartbeat Pulse Nodes -->
+                  <linearGradient id="newNodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="newLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.9" />
+                    <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:0.9" />
+                  </linearGradient>
+                  <linearGradient id="newActiveNodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f87171;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#ef4444;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+                  </linearGradient>
+                  <!-- Enhanced Glow Filters -->
+                  <filter id="newGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="newLineGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="5" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="newHighlightGlow" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="10" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Connecting Lines (will be drawn progressively) -->
+                <g id="newTimelineLines"></g>
+
+                <!-- Stage Nodes (will be added by JS) -->
+                <g id="newTimelineNodes"></g>
+              </svg>
+            </div>
+
+            <!-- New Content Display -->
+            <div class="new-content-display">
+              <div class="new-content-glow"></div>
+              <div class="new-content-inner">
+                <div class="new-stage-number">
+                  <span class="new-stage-label">Stage</span>
+                  <span class="new-stage-value" id="newStageNumber">01</span>
+                </div>
+                <h3 id="newStageTitle" class="new-stage-heading">DECODING</h3>
+                <div class="new-content-divider"></div>
+                <p id="newStageDescription" class="new-stage-description">
+                  We begin by thoroughly researching our customers and their developers to decode their requirements.
+                  Through close coordination, we gain a deep understanding of their business nature, product quality
+                  expectations, operational processes, team environment, target audience, and costing considerations.
+                  This holistic approach ensures that every solution we provide is precisely tailored, strategically
+                  aligned, and built for mutual success.
+                </p>
+              </div>
+
+              <!-- New Stage Indicators -->
+              <div class="new-stage-indicators" id="newIndicators"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: The LF Digital Platform (Video) -->
+        <div class="tab-content" id="tab-digital">
+          <div class="content-grid">
+            <div class="video-content">
+              <div class="video-overlay"></div>
+              <div class="video-placeholder">
+                <div class="play-button-wrapper">
+                  <div class="play-button">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+                <h3>Digital Clicks</h3>
+                <p>Watch how our technology transforms supply chain management</p>
+              </div>
+            </div>
+            <div class="content-display">
+              <div class="content-glow"></div>
+              <div class="content-inner">
+                <div class="icon-wrapper">
+                  <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Digital Innovation</h3>
+                <div class="content-divider"></div>
+                <p>
+                  Our digital platform leverages cutting-edge technology to provide real-time visibility,
+                  advanced analytics, and seamless integration across your entire supply chain network.
+                  From raw material sourcing to final delivery, our platform ensures efficiency, transparency,
+                  and collaboration at every step.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Supply Chain Solutions (Speed Chart) -->
+        <div class="tab-content" id="tab-solutions">
+          <div class="content-grid">
+            <div class="speed-chart">
+              <div class="chart-header">
+                <div class="chart-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3>Enabling speed in the product development cycle</h3>
+              </div>
+              <div class="chart-bars">
+                <div class="chart-bar">
+                  <div class="bar-top">
+                    <div class="bar-label">Average calendar</div>
+                    <div class="bar-value">40 weeks</div>
+                  </div>
+                  <div class="bar-container">
+                    <div class="bar-fill gray" style="width: 100%;">
+                      <div class="bar-shine"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart-bar">
+                  <div class="bar-top">
+                    <div class="bar-label">With Just A Click digital apps</div>
+                    <div class="bar-value highlight">21 weeks</div>
+                  </div>
+                  <div class="bar-container">
+                    <div class="bar-fill red" style="width: 52.5%;">
+                      <div class="bar-shine"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-display">
+              <div class="content-glow"></div>
+              <div class="content-inner">
+                <div class="icon-wrapper">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Accelerated Solutions</h3>
+                <div class="content-divider"></div>
+                <p>
+                  Our innovative approach reduces product development cycles by nearly 50%, enabling faster
+                  time-to-market and increased competitiveness. Through digital collaboration tools, automated
+                  workflows, and real-time communication, we help you stay ahead in today's fast-paced market.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Cards (Navigation) -->
+      <div class="bottom-cards">
+        <a href="we-manage-you-grow.html" target="_blank" class="info-card active"
+          style="text-decoration: none; color: inherit;">
+          <div class="card-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="card-content">
+            <h4>We Manage You Grow</h4>
+            <p>End to End</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+        <div class="info-card" data-tab="tab-digital">
+          <div class="card-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <div class="card-content">
+            <h4>Digital Tour</h4>
+            <p>Understand by watch</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Stage Data - New Zig-zag Timeline positions (x, y coordinates)
+      const newStages = [
+        {
+          name: 'DECODING',
+          title: 'DECODING',
+          description: 'We begin by thoroughly researching our customers and their developers to decode their requirements. Through close coordination, we gain a deep understanding of their business nature, product quality expectations, operational processes, team environment, target audience, and costing considerations. This holistic approach ensures that every solution we provide is precisely tailored, strategically aligned, and built for mutual success.',
+          x: 120,
+          y: 380  // Bottom left
+        },
+        {
+          name: 'DESIGN & DEVELOPMENT',
+          title: 'DESIGN & DEVELOPMENT',
+          description: 'After understanding the customer\'s requirements, we move on to design and development. We create innovative and practical solutions that match their vision, refining each design to ensure it meets their goals, day-to-day operations, and market needs - while keeping the process smooth and efficient.',
+          x: 320,
+          y: 120  // Top (zig)
+        },
+        {
+          name: 'QUALITY PRODUCTION',
+          title: 'QUALITY PRODUCTION',
+          description: 'Once all requirements are finalized, we select the most suitable manufacturers from our network of 100+ global partners - choosing those with relevant experience in the product category and adherence to our customers\' standards. This ensures the highest quality services are delivered seamlessly.',
+          x: 520,
+          y: 380  // Bottom (zag)
+        },
+        {
+          name: 'QUALITY ASSURANCE & CONTROL',
+          title: 'QUALITY ASSURANCE & CONTROL',
+          description: 'Our experienced in-house quality team oversees every step - from sampling to final production - ensuring each product meets the highest standards. Through thorough in-line checks and final inspections, we deliver consistent, reliable, and excellent results.',
+          x: 720,
+          y: 120  // Top (zig)
+        },
+        {
+          name: 'LOGISTICS AND DELIVERY',
+          title: 'LOGISTICS AND DELIVERY',
+          description: 'After production and quality checks, we take care of logistics and delivery. Our team carefully packs each product, ships it on time, and monitors it throughout the journey to ensure it reaches our customers safely and smoothly. By optimizing freight costs, tariffs, and import duties across shipments from different countries, we also help reduce expenses and maximize value for our customers.',
+          x: 920,
+          y: 380  // Bottom (zag)
+        },
+        {
+          name: 'LAUNCH WITH IMPACT',
+          title: 'LAUNCH WITH IMPACT',
+          description: 'Once the product is ready, we make sure it reaches the market with maximum impact. We work closely with our partners to position it right, create repeat opportunities, boost sales, and build strong, long-term relationships that benefit everyone involved.',
+          x: 1080,
+          y: 120  // Top right (zig)
+        }
+      ];
+
+      // State
+      let newActiveStage = 0;
+      let newIsAutoPlay = true;
+      let newInterval;
+      let newNodesAppeared = false;
+      let newLinesDrawn = false;
+
+      // Elements
+      const newStageTitle = document.getElementById('newStageTitle');
+      const newStageDescription = document.getElementById('newStageDescription');
+      const newStageNumber = document.getElementById('newStageNumber');
+      const newTimelineNodesGroup = document.getElementById('newTimelineNodes');
+      const newTimelineLinesGroup = document.getElementById('newTimelineLines');
+      const newIndicatorsContainer = document.getElementById('newIndicators');
+
+      // Tab Navigation
+      const infoCards = document.querySelectorAll('.info-card');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      infoCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          // Skip if it's a link (anchor tag)
+          if (card.tagName === 'A' || card.closest('a')) {
+            return;
+          }
+
+          const tabId = card.getAttribute('data-tab');
+          if (!tabId) return;
+
+          e.preventDefault();
+
+          // Update active card
+          infoCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+
+          // Update active tab
+          tabContents.forEach(tab => tab.classList.remove('active'));
+          document.getElementById(tabId).classList.add('active');
+
+          // Reset timeline animation if switching to orchestration tab
+          if (tabId === 'tab-orchestration') {
+            newActiveStage = 0;
+            newUpdateUI();
+            if (newIsAutoPlay) {
+              newStopAutoPlay();
+              newStartAutoPlay();
+            }
+          }
+        });
+      });
+
+      // Create new timeline nodes
+      function newCreateTimelineNodes() {
+        newStages.forEach((stage, index) => {
+          const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+          g.classList.add('new-timeline-node');
+          g.setAttribute('data-index', index);
+          g.style.opacity = '0';
+          g.style.transform = 'scale(0)';
+          g.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          g.style.zIndex = '1';
+
+          // Glowing circular node with enhanced gradient
+          const outerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          outerCircle.setAttribute('cx', stage.x);
+          outerCircle.setAttribute('cy', stage.y);
+          outerCircle.setAttribute('r', '12');
+          outerCircle.setAttribute('fill', 'url(#newNodeGradient)');
+          outerCircle.setAttribute('stroke', 'url(#newNodeGradient)');
+          outerCircle.setAttribute('stroke-width', '3');
+          outerCircle.setAttribute('filter', 'url(#newGlow)');
+          outerCircle.setAttribute('class', 'new-node-circle');
+
+          // Inner highlight circle
+          const innerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          innerCircle.setAttribute('cx', stage.x);
+          innerCircle.setAttribute('cy', stage.y);
+          innerCircle.setAttribute('r', '6');
+          innerCircle.setAttribute('fill', '#ffffff');
+          innerCircle.setAttribute('opacity', '0.5');
+
+          // Label text - alternating above and below
+          const labelY = index % 2 === 0 ? stage.y - 50 : stage.y + 50;
+          const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          label.setAttribute('x', stage.x);
+          label.setAttribute('y', labelY);
+          label.setAttribute('text-anchor', 'middle');
+          label.setAttribute('font-size', '13');
+          label.setAttribute('font-weight', '900');
+          label.setAttribute('fill', '#1a1a1a');
+          label.setAttribute('letter-spacing', '0.5px');
+          label.setAttribute('class', 'new-process-label');
+          label.setAttribute('font-family', 'Arial, sans-serif');
+          label.setAttribute('dominant-baseline', 'middle');
+          label.textContent = stage.name;
+
+          // Rounded rectangle background for label
+          const textWidth = Math.max(stage.name.length * 8.5, 140);
+          const textBg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          textBg.setAttribute('x', stage.x - textWidth / 2 - 14);
+          textBg.setAttribute('y', labelY - 13);
+          textBg.setAttribute('width', textWidth + 28);
+          textBg.setAttribute('height', '26');
+          textBg.setAttribute('rx', '13');
+          textBg.setAttribute('fill', 'rgba(255, 255, 255, 0.98)');
+          textBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.12)');
+          textBg.setAttribute('stroke-width', '1.5');
+          textBg.setAttribute('class', 'new-label-background');
+
+          // Insert elements in order
+          g.appendChild(textBg);
+          g.appendChild(outerCircle);
+          g.appendChild(innerCircle);
+          g.appendChild(label);
+          newTimelineNodesGroup.appendChild(g);
+
+          // Click handler
+          g.addEventListener('click', () => {
+            newSetActiveStage(index);
+            newIsAutoPlay = false;
+            newStopAutoPlay();
+          });
+
+          // Animate node appearance
+          setTimeout(() => {
+            g.style.opacity = '1';
+            g.style.transform = 'scale(1)';
+          }, index * 250);
+        });
+
+        // After all nodes appear, draw lines
+        setTimeout(() => {
+          newNodesAppeared = true;
+          newDrawTimelineLines();
+        }, newStages.length * 250 + 400);
+      }
+
+      // Draw connecting lines progressively
+      function newDrawTimelineLines() {
+        for (let i = 0; i < newStages.length - 1; i++) {
+          const start = newStages[i];
+          const end = newStages[i + 1];
+
+          // Glowing zig-zag line with gradient
+          const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          line.setAttribute('x1', start.x);
+          line.setAttribute('y1', start.y);
+          line.setAttribute('x2', end.x);
+          line.setAttribute('y2', end.y);
+          line.setAttribute('stroke', 'url(#newLineGradient)');
+          line.setAttribute('stroke-width', '5');
+          line.setAttribute('stroke-linecap', 'round');
+          line.setAttribute('filter', 'url(#newLineGlow)');
+          line.setAttribute('opacity', '0');
+          line.setAttribute('class', 'new-timeline-line');
+
+          const totalLength = Math.sqrt(Math.pow(end.x - start.x, 2) + Math.pow(end.y - start.y, 2));
+          line.style.strokeDasharray = totalLength;
+          line.style.strokeDashoffset = totalLength;
+          line.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-out';
+
+          newTimelineLinesGroup.appendChild(line);
+
+          // Animate line drawing
+          setTimeout(() => {
+            line.setAttribute('opacity', '1');
+            line.style.strokeDashoffset = '0';
+
+            // If this is the last line, mark as drawn
+            if (i === newStages.length - 2) {
+              setTimeout(() => {
+                newLinesDrawn = true;
+              }, 1500);
+            }
+          }, i * 1000 + 700);
+        }
+      }
+
+      // Create indicators
+      function newCreateIndicators() {
+        newStages.forEach((stage, index) => {
+          const indicator = document.createElement('div');
+          indicator.classList.add('new-indicator');
+          indicator.setAttribute('data-index', index);
+          indicator.addEventListener('click', () => {
+            newSetActiveStage(index);
+            newIsAutoPlay = false;
+            newStopAutoPlay();
+          });
+          newIndicatorsContainer.appendChild(indicator);
+        });
+      }
+
+      // Update active stage
+      function newSetActiveStage(index) {
+        newActiveStage = index;
+        newUpdateUI();
+      }
+
+      // Update UI
+      function newUpdateUI() {
+        // Update content
+        newStageTitle.textContent = newStages[newActiveStage].title;
+        newStageDescription.textContent = newStages[newActiveStage].description;
+        newStageNumber.textContent = String(newActiveStage + 1).padStart(2, '0');
+
+        // Update timeline nodes
+        const nodes = document.querySelectorAll('.new-timeline-node');
+        nodes.forEach((node, index) => {
+          const circle = node.querySelector('.new-node-circle');
+          const innerCircle = node.querySelector('circle:not(.new-node-circle)');
+          const label = node.querySelector('.new-process-label');
+          const labelBg = node.querySelector('.new-label-background');
+
+          if (index === newActiveStage) {
+            node.classList.add('new-active');
+            if (circle) {
+              circle.setAttribute('r', '16');
+              circle.setAttribute('fill', 'url(#newActiveNodeGradient)');
+              circle.setAttribute('stroke', 'url(#newActiveNodeGradient)');
+              circle.setAttribute('filter', 'url(#newHighlightGlow)');
+            }
+            if (innerCircle) {
+              innerCircle.setAttribute('r', '8');
+              innerCircle.setAttribute('opacity', '0.7');
+            }
+            if (label) {
+              label.setAttribute('font-size', '15');
+              label.setAttribute('font-weight', '900');
+              label.setAttribute('fill', '#1a1a1a');
+            }
+            if (labelBg) {
+              labelBg.setAttribute('fill', 'rgba(255, 255, 255, 1)');
+              labelBg.setAttribute('stroke', 'rgba(99, 102, 241, 0.5)');
+              labelBg.setAttribute('stroke-width', '2');
+              labelBg.setAttribute('filter', 'url(#newGlow)');
+            }
+          } else if (index < newActiveStage) {
+            node.classList.remove('new-active');
+            if (circle) {
+              circle.setAttribute('r', '12');
+              circle.setAttribute('fill', 'url(#newNodeGradient)');
+              circle.setAttribute('stroke', 'url(#newNodeGradient)');
+              circle.setAttribute('filter', 'url(#newGlow)');
+            }
+            if (innerCircle) {
+              innerCircle.setAttribute('r', '6');
+              innerCircle.setAttribute('opacity', '0.5');
+            }
+            if (label) {
+              label.setAttribute('font-size', '13');
+              label.setAttribute('font-weight', '900');
+              label.setAttribute('fill', '#1a1a1a');
+            }
+            if (labelBg) {
+              labelBg.setAttribute('fill', 'rgba(255, 255, 255, 0.98)');
+              labelBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.12)');
+              labelBg.setAttribute('stroke-width', '1.5');
+              labelBg.setAttribute('filter', 'none');
+            }
+          } else {
+            node.classList.remove('new-active');
+            if (circle) {
+              circle.setAttribute('r', '12');
+              circle.setAttribute('fill', 'url(#newNodeGradient)');
+              circle.setAttribute('stroke', 'url(#newNodeGradient)');
+              circle.setAttribute('filter', 'url(#newGlow)');
+            }
+            if (innerCircle) {
+              innerCircle.setAttribute('r', '6');
+              innerCircle.setAttribute('opacity', '0.3');
+            }
+            if (label) {
+              label.setAttribute('font-size', '13');
+              label.setAttribute('font-weight', '900');
+              label.setAttribute('fill', '#1a1a1a');
+            }
+            if (labelBg) {
+              labelBg.setAttribute('fill', 'rgba(255, 255, 255, 0.95)');
+              labelBg.setAttribute('stroke', 'rgba(0, 0, 0, 0.08)');
+              labelBg.setAttribute('stroke-width', '1.5');
+              labelBg.setAttribute('filter', 'none');
+            }
+          }
+        });
+
+        // Update indicators
+        const indicators = document.querySelectorAll('.new-indicator');
+        indicators.forEach((indicator, index) => {
+          indicator.classList.remove('new-active', 'new-passed');
+          if (index === newActiveStage) {
+            indicator.classList.add('new-active');
+          } else if (index < newActiveStage) {
+            indicator.classList.add('new-passed');
+          }
+        });
+      }
+
+      // Auto-play
+      function newStartAutoPlay() {
+        newActiveStage = 0;
+        newUpdateUI();
+
+        newInterval = setInterval(() => {
+          if (newActiveStage < newStages.length - 1) {
+            newActiveStage = newActiveStage + 1;
+            newUpdateUI();
+          } else {
+            newStopAutoPlay();
+          }
+        }, 2500);
+      }
+
+      function newStopAutoPlay() {
+        clearInterval(newInterval);
+      }
+
+      // Sequential heartbeat pulse - wave effect from left to right with z-index
+      let currentPulsingNode = 0;
+
+      function startSequentialPulse() {
+        // Remove pulse from all nodes first
+        const allNodes = document.querySelectorAll('.new-timeline-node');
+        allNodes.forEach((node, index) => {
+          const circle = node.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'none';
+          }
+          // Set initial z-index based on position
+          node.style.zIndex = String(index + 1);
+        });
+
+        // Start pulsing from first node
+        currentPulsingNode = 0;
+        pulseNextNode();
+      }
+
+      function pulseNextNode() {
+        const allNodes = document.querySelectorAll('.new-timeline-node');
+
+        // Remove pulse from all nodes and update z-index
+        allNodes.forEach((node, index) => {
+          const circle = node.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'none';
+          }
+          // Set z-index: current node highest, previous nodes lower, future nodes lowest
+          if (index === currentPulsingNode) {
+            node.style.zIndex = '100';
+          } else if (index < currentPulsingNode) {
+            node.style.zIndex = String(50 + index);
+          } else {
+            node.style.zIndex = String(index + 1);
+          }
+        });
+
+        // Add pulse to current node and show its content
+        if (currentPulsingNode < allNodes.length) {
+          // Update active stage to show current node's content
+          newSetActiveStage(currentPulsingNode);
+
+          const currentNode = allNodes[currentPulsingNode];
+          const circle = currentNode.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'heartbeatPulse 1.5s ease infinite';
+          }
+
+          // Move to next node after showing for a duration
+          setTimeout(() => {
+            if (circle) {
+              circle.style.animation = 'none';
+            }
+            currentPulsingNode++;
+            if (currentPulsingNode < allNodes.length) {
+              pulseNextNode();
+            } else {
+              // Restart from beginning
+              currentPulsingNode = 0;
+              setTimeout(() => pulseNextNode(), 1000);
+            }
+          }, 2500);
+        }
+      }
+
+      function stopSequentialPulse() {
+        const allNodes = document.querySelectorAll('.new-timeline-node');
+        allNodes.forEach(node => {
+          const circle = node.querySelector('.new-node-circle');
+          if (circle) {
+            circle.style.animation = 'none';
+          }
+        });
+        currentPulsingNode = 0;
+      }
+
+      // Initialize
+      newCreateTimelineNodes();
+      newCreateIndicators();
+      newUpdateUI();
+
+      // Start sequential pulse after nodes and lines are drawn (no auto-play)
+      setTimeout(() => {
+        if (newLinesDrawn) {
+          startSequentialPulse();
+        } else {
+          const checkInterval = setInterval(() => {
+            if (newLinesDrawn) {
+              clearInterval(checkInterval);
+              startSequentialPulse();
+            }
+          }, 100);
+        }
+      }, newStages.length * 250 + (newStages.length - 1) * 1000 + 2500);
+    </script>
+  </section>
+
+  <!-- Our Team Section -->
+  <section id="team" class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Expert at <span class="gradient-text">Work</span></h2>
+        <p>Experience, visionary thinking, and talented minds define our team, enabling us to deliver professional,
+          innovative, and dependable solutions.</p>
+      </div>
+
+      <!-- Team Members -->
+      <div class="strategy-cards">
+        <!-- Team Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper team-image-wrapper">
+            <div class="icon-bg"></div>
+            <img src="https://placebeard.it/450x450/11" alt="Jose Knutson" class="team-member-image" />
+            <div class="team-social-overlay">
+              <a href="#" class="team-social-link"><i class="fas fa-envelope"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Co-founder</div>
+            <h3>JOSE KNUTSON</h3>
+            <div class="card-divider"></div>
+          </div>
+        </div>
+
+        <!-- Team Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper team-image-wrapper">
+            <div class="icon-bg"></div>
+            <img src="https://placebeard.it/450x450/2" alt="Bernard Ramos" class="team-member-image" />
+            <div class="team-social-overlay">
+              <a href="#" class="team-social-link"><i class="fas fa-envelope"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Co-founder</div>
+            <h3>BERNARD RAMOS</h3>
+            <div class="card-divider"></div>
+          </div>
+        </div>
+
+        <!-- Team Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper team-image-wrapper">
+            <div class="icon-bg"></div>
+            <img src="https://placebeard.it/450x450/3" alt="Michael Alexander" class="team-member-image" />
+            <div class="team-social-overlay">
+              <a href="#" class="team-social-link"><i class="fas fa-envelope"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Co-founder</div>
+            <h3>MICHAEL ALEXANDER</h3>
+            <div class="card-divider"></div>
+          </div>
+        </div>
+
+        <!-- Team Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper team-image-wrapper">
+            <div class="icon-bg"></div>
+            <img src="https://placebeard.it/450x450/4" alt="Herman Mach" class="team-member-image" />
+            <div class="team-social-overlay">
+              <a href="#" class="team-social-link"><i class="fas fa-envelope"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Developer</div>
+            <h3>HERMAN MACH</h3>
+            <div class="card-divider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Products Section -->
+  <section id="products" class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Categories <span class="gradient-text">We Serve</span></h2>
+        <p>We proudly serve retail brands, wholesale companies, developers, interior designers, hotels, restaurants,
+          caterers, event planners, and more—providing all these categories under one roof with stress-free transactions
+          for effortless sourcing and growth.</p>
+      </div>
+
+      <!-- Products Cards -->
+      <div class="strategy-cards">
+        <!-- Product Card -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>FURNITURE</h3>
+          </div>
+        </div>
+
+        <!-- Product Card -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>LIGHTING</h3>
+
+          </div>
+        </div>
+
+        <!-- Product Card -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>HOME DECOR</h3>
+
+          </div>
+        </div>
+
+        <!-- Kitchen & Tableware -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>KITCHEN & TABLEWARE</h3>
+
+          </div>
+        </div>
+
+
+        <!-- Dinnerware and Drinkware -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>DINNERWARE & DRINKWARE</h3>
+
+          </div>
+        </div>
+
+        <!-- Product Card -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>OUTDOOR & GARDENS</h3>
+
+          </div>
+        </div>
+
+
+
+        <!-- Utility & Essentials -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>UTILITY & ESSENTIALS</h3>
+
+          </div>
+        </div>
+
+        <!-- Customize Projects -->
+        <div class="strategy-card"
+          style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&auto=format&fit=crop');">
+          <div class="card-image-overlay"></div>
+          <div class="card-glow"></div>
+
+          <div class="card-content-wrapper">
+            <h3>CUSTOMIZE PROJECTS</h3>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 mt-12">
+        <button
+          class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
+          View Full Collection
+        </button>
+        <button
+          class="border-2 border-red-600 text-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-red-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
+          Request Custom Quote
+        </button>
+        <button
+          class="border-2 border-green-600 text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-green-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
+          Partner with Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why We Exist Section -->
+  <section id="why-we-exist" class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Why only <span class="gradient-text">Us</span></h2>
+        <p>From design to delivery, we empower buyers, wholesalers, and vendors with seamless, reliable, premium
+          solutions.</p>
+      </div>
+
+      <!-- Why We Exist Cards -->
+      <div class="strategy-cards">
+        <!-- Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-link"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>EXCELLENT SERVICE</h3>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-industry"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>INNOVATION & TECHNOLOGY</h3>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>TRANSPARENCY & CUSTOMER-FRIENDLY</h3>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>TRUST & RELIABILITY</h3>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>PASSION & DEDICATION</h3>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>EXPERIENCED TEAM</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-12">
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-users text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number1">0</span>+
+          </h3>
+          <p class="text-gray-600 text-lg">Happy Clients</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-globe text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number2">0</span>+
+          </h3>
+          <p class="text-gray-600 text-lg">Countries Served</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-box text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number3">0</span>K+
+          </h3>
+          <p class="text-gray-600 text-lg">Products Delivered</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-star text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">
+            <span id="number4">0</span>%
+          </h3>
+          <p class="text-gray-600 text-lg">Customer Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Started Section -->
+  <section id="get-started" class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Just A Click <span class="gradient-text">And Lets grow together</span></h2>
+      </div>
+
+      <!-- Login Cards -->
+      <div class="strategy-cards">
+        <!-- Buyer Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>BUYER LOGIN</h3>
+            <div class="card-divider"></div>
+            <p>Access our exclusive collections and place orders for your home furnishing needs.</p>
+            <div class="mt-6">
+              <button
+                class="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-xl font-bold text-sm w-full hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                Login as Buyer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vendor Card -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <h3>VENDOR LOGIN</h3>
+            <div class="card-divider"></div>
+            <p>Partner with us and expand your reach in the home furnishing market.</p>
+            <div class="mt-6">
+              <button
+                class="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-xl font-bold text-sm w-full hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                Login as Vendor
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get in Touch Section - Loaded from component -->
+  <div data-component="components/get-in-touch.html"></div>
+
+  <!-- Footer Section -->
+  <footer class="bg-white text-gray-600 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm text-gray-600">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Home</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Who We Are</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Blog</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-red-600 duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-red-600 duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="components/component-loader.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // jQuery Simple Counter Plugin
+    $.fn.jQuerySimpleCounter = function (options) {
+      var settings = $.extend({
+        start: 0,
+        end: 100,
+        easing: 'swing',
+        duration: 400,
+        complete: ''
+      }, options);
+
+      var thisElement = $(this);
+
+      $({ count: settings.start }).animate({ count: settings.end }, {
+        duration: settings.duration,
+        easing: settings.easing,
+        step: function () {
+          var mathCount = Math.ceil(this.count);
+          thisElement.text(mathCount);
+        },
+        complete: settings.complete
+      });
+    };
+
+    // Initialize counters when page loads
+    $(document).ready(function () {
+      // Check if element is in viewport before animating
+      function isInViewport(element) {
+        var elementTop = $(element).offset().top;
+        var elementBottom = elementTop + $(element).outerHeight();
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+      }
+
+      var hasAnimated = false;
+
+      function animateCounters() {
+        if (!hasAnimated && isInViewport($('#number1').closest('section'))) {
+          hasAnimated = true;
+          $('#number1').jQuerySimpleCounter({ end: 500, duration: 3000 });
+          $('#number2').jQuerySimpleCounter({ end: 50, duration: 3000 });
+          $('#number3').jQuerySimpleCounter({ end: 10, duration: 2000 });
+          $('#number4').jQuerySimpleCounter({ end: 99, duration: 2500 });
+        }
+      }
+
+      // Animate on page load
+      animateCounters();
+
+      // Also check on scroll (in case section is below fold)
+      $(window).on('scroll', function () {
+        if (!hasAnimated) {
+          animateCounters();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

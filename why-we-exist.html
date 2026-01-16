@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why We Exist - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <img src="Logo/Logo.jpg" alt="Logo"
+                class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-red-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-1">
+            <a href="index.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Why
+              We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About
+              Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+            <div class="relative group">
+              <button
+                class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div
+                class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div class="py-2">
+                  <a href="esg-strategy.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG
+                    Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply
+                    Chain Innovation</a>
+                  <a href="investors.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+                  <a href="media.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+                  <a href="suppliers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+                  <a href="careers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-lg">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Why
+          We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">About
+          Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG
+            Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply
+            Chain Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md">
+            Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <div class="section-header">
+        <h2>Why We <span class="gradient-text">Exist</span></h2>
+        <p>Driven by Excellence, Innovation & Trust</p>
+      </div>
+      <div class="text-center max-w-4xl mx-auto mt-8">
+        <h3 class="text-2xl sm:text-3xl font-bold text-black mb-6">
+          From design to delivery, we empower buyers, wholesalers, and vendors with seamless, reliable, premium
+          solutions.
+        </h3>
+        <p class="text-lg sm:text-xl text-black/80 max-w-4xl mx-auto">
+          We exist to bridge the gap between creative vision and market reality, providing comprehensive solutions that
+          transform ideas into exceptional home furnishing products delivered worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiators -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <div class="section-header">
+        <h2>What Sets Us <span class="gradient-text">Apart</span></h2>
+        <p>Our unique approach to home furnishing excellence</p>
+      </div>
+
+      <div class="strategy-cards">
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-link"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Solution</div>
+            <h3>END-TO-END SOLUTIONS</h3>
+            <div class="card-divider"></div>
+            <p>Complete service from concept to delivery, handling every aspect of your home furnishing needs under one
+              roof.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Design conceptualization</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Material sourcing</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Production management</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Quality assurance</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Global delivery</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-industry"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Manufacturing</div>
+            <h3>OWN DESIGNS & MANUFACTURING</h3>
+            <div class="card-divider"></div>
+            <p>In-house design capabilities and manufacturing facilities ensure quality control and innovation at every
+              step.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Creative design team</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Modern manufacturing</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Quality control</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Innovation focus</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Custom solutions</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Verified</div>
+            <h3>VERIFIED SUPPLIERS & WHOLESALE</h3>
+            <div class="card-divider"></div>
+            <p>Trusted network of verified suppliers and wholesale partners ensuring consistent quality and competitive
+              pricing.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Verified supplier network</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Quality certifications</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Competitive pricing</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Reliable partnerships</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Global reach</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Custom</div>
+            <h3>CUSTOMIZATION & FLEXIBILITY</h3>
+            <div class="card-divider"></div>
+            <p>Tailored solutions and flexible approaches to meet your specific requirements and market demands.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Custom specifications</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Flexible production</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Brand integration</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Special requirements</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Adaptive solutions</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Global</div>
+            <h3>GLOBAL REACH</h3>
+            <div class="card-divider"></div>
+            <p>Worldwide delivery and support network ensuring your products reach customers anywhere in the world.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">International shipping</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Local partnerships</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Global support</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Market expertise</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Cultural adaptation</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Team</div>
+            <h3>DEDICATED TEAM</h3>
+            <div class="card-divider"></div>
+            <p>Expert professionals across design, production, quality, and delivery dedicated to your success.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Expert professionals</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Specialized skills</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Dedicated support</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Continuous training</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Customer focus</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Core <span class="gradient-text">Values</span></h2>
+        <p>The principles that guide everything we do</p>
+      </div>
+
+      <div class="strategy-cards">
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Value</div>
+            <h3>EXCELLENCE</h3>
+            <div class="card-divider"></div>
+            <p>We strive for the highest quality in everything we do, from design to delivery.</p>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Value</div>
+            <h3>INNOVATION</h3>
+            <div class="card-divider"></div>
+            <p>We continuously innovate to bring fresh ideas and solutions to the market.</p>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Value</div>
+            <h3>TRUST</h3>
+            <div class="card-divider"></div>
+            <p>We build lasting relationships based on trust, transparency, and reliability.</p>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Value</div>
+            <h3>PASSION</h3>
+            <div class="card-divider"></div>
+            <p>We are passionate about creating beautiful, functional home furnishing solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <div class="section-header">
+        <h2>Trusted by Industry <span class="gradient-text">Leaders</span></h2>
+        <p>Join thousands of satisfied customers worldwide</p>
+      </div>
+
+      <div class="strategy-cards mb-12">
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Testimonial</div>
+            <h3>SARAH JOHNSON</h3>
+            <div class="card-divider"></div>
+            <p class="italic">"Just A Click transformed our product line with their innovative designs and reliable
+              manufacturing. Our sales increased by 40% in just six months."</p>
+            <p class="text-sm text-white/60 mt-4">CEO, HomeStyle Inc.</p>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Testimonial</div>
+            <h3>MICHAEL CHEN</h3>
+            <div class="card-divider"></div>
+            <p class="italic">"Their end-to-end solution saved us months of work. From design to delivery, everything
+              was handled professionally and on time."</p>
+            <p class="text-sm text-white/60 mt-4">Wholesale Director, Global Furnishings</p>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Testimonial</div>
+            <h3>EMMA RODRIGUEZ</h3>
+            <div class="card-divider"></div>
+            <p class="italic">"The quality and attention to detail is exceptional. Our customers love the products, and
+              we love working with Just A Click."</p>
+            <p class="text-sm text-white/60 mt-4">Procurement Manager, Luxury Homes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-12">
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-users text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">500+</h3>
+          <p class="text-gray-600 text-lg">Happy Clients</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-globe text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">50+</h3>
+          <p class="text-gray-600 text-lg">Countries Served</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-box text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">10K+</h3>
+          <p class="text-gray-600 text-lg">Products Delivered</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <i class="fas fa-star text-4xl text-red-600"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">99%</h3>
+          <p class="text-gray-600 text-lg">Customer Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <div class="text-center max-w-4xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl font-bold text-black mb-6">
+          Ready to Experience <span class="gradient-text">Excellence</span>?
+        </h2>
+        <p class="text-xl sm:text-2xl text-black/80 mb-10 leading-relaxed">
+          Join thousands of satisfied customers who trust Just A Click for their home furnishing needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-gradient-to-r from-red-500 to-red-600 text-black px-8 py-4 rounded-xl font-bold text-sm hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105">
+            Request a Quote
+          </button>
+          <button
+            class="border-2 border-red-400 text-black px-8 py-4 rounded-xl font-bold text-sm hover:bg-red-500 hover:border-red-500 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105">
+            Explore Our Designs
+          </button>
+          <button
+            class="border-2 border-red-400 text-black px-8 py-4 rounded-xl font-bold text-sm hover:bg-red-500 hover:border-red-500 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105">
+            Partner with Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get in Touch Section - Loaded from component -->
+  <div data-component="components/get-in-touch.html"></div>
+
+  <!-- Footer Section -->
+  <footer class="bg-white text-gray-600 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm text-gray-600">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Home</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Who We Are</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Blog</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-red-600 duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-red-600 duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="components/component-loader.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

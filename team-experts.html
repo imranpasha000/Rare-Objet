@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Our Experts - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+      <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <img src="Logo/Logo.jpg" alt="Logo"
+                class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-red-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-1">
+            <a href="index.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Why We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+            <div class="relative group">
+              <button class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div
+                class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div class="py-2">
+                  <a href="esg-strategy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply Chain Innovation</a>
+                  <a href="investors.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+                  <a href="media.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+                  <a href="suppliers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+                  <a href="careers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-lg">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Why We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">About Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply Chain Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md">
+            Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-red-50 to-indigo-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          Meet Our <span class="text-red-600">Experts</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Every project is backed by a skilled team across design, sourcing, production, quality, and delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design & Product Development Department -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Design & Product Development</h2>
+        <p class="text-xl text-gray-600">Creative minds bringing innovative home furnishing solutions to life</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <div class="bg-gradient-to-br from-red-100 to-indigo-100 rounded-lg p-8 text-center mb-8">
+            <div
+              class="w-32 h-32 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-user text-white text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Sarah Chen</h3>
+            <p class="text-red-600 font-semibold mb-4">Head of Design & Product Development</p>
+            <blockquote class="text-lg text-gray-600 italic">
+              "We don't just design furniture, we create experiences that transform how people live and work in their
+              spaces."
+            </blockquote>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Design Team</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Our design team combines creativity with functionality, ensuring every product meets both aesthetic and
+            practical needs.
+            From concept to final product, we bring innovative solutions to the home furnishing industry.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">15+</div>
+              <p class="text-gray-600">Designers</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">500+</div>
+              <p class="text-gray-600">Products Designed</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">25+</div>
+              <p class="text-gray-600">Awards Won</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-yellow-600 mb-2">10+</div>
+              <p class="text-gray-600">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Photos/Video Snippets -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-red-200 to-red-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-palette text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-green-200 to-green-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-drafting-compass text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-purple-200 to-purple-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-cube text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sourcing & Procurement Department -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Sourcing & Procurement</h2>
+        <p class="text-xl text-gray-600">Global network experts ensuring quality materials and reliable suppliers</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <div class="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg p-8 text-center mb-8">
+            <div
+              class="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-user text-white text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Michael Rodriguez</h3>
+            <p class="text-green-600 font-semibold mb-4">Head of Sourcing & Procurement</p>
+            <blockquote class="text-lg text-gray-600 italic">
+              "We build lasting relationships with suppliers who share our commitment to quality, sustainability, and
+              ethical practices."
+            </blockquote>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Sourcing Team</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Our sourcing team maintains relationships with over 5,000 suppliers worldwide, ensuring we have access to
+            the best materials
+            and manufacturing capabilities while maintaining our high standards for quality and sustainability.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">5,000+</div>
+              <p class="text-gray-600">Global Suppliers</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">50+</div>
+              <p class="text-gray-600">Countries</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">99.5%</div>
+              <p class="text-gray-600">Quality Score</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-yellow-600 mb-2">15+</div>
+              <p class="text-gray-600">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Photos/Video Snippets -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-green-200 to-green-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-search text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-red-200 to-red-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-handshake text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-purple-200 to-purple-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-globe text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturing & Production Management Department -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Manufacturing & Production Management</h2>
+        <p class="text-xl text-gray-600">Production experts ensuring efficient and quality manufacturing processes</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <div class="bg-gradient-to-br from-purple-100 to-violet-100 rounded-lg p-8 text-center mb-8">
+            <div
+              class="w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-user text-white text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Emma Thompson</h3>
+            <p class="text-purple-600 font-semibold mb-4">Head of Manufacturing & Production</p>
+            <blockquote class="text-lg text-gray-600 italic">
+              "Precision in production is not just about quality, it's about delivering excellence that exceeds
+              expectations every time."
+            </blockquote>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Production Team</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Our manufacturing team oversees production across multiple facilities, ensuring consistent quality,
+            timely delivery, and adherence to the highest standards of craftsmanship and efficiency.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">25+</div>
+              <p class="text-gray-600">Production Facilities</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">10M+</div>
+              <p class="text-gray-600">Products Manufactured</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">99.8%</div>
+              <p class="text-gray-600">On-Time Delivery</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-yellow-600 mb-2">20+</div>
+              <p class="text-gray-600">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Photos/Video Snippets -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-purple-200 to-purple-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-industry text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-red-200 to-red-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-cogs text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-green-200 to-green-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-chart-line text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Assurance & Auditing Department -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Quality Assurance & Auditing</h2>
+        <p class="text-xl text-gray-600">Quality experts ensuring every product meets our highest standards</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <div class="bg-gradient-to-br from-yellow-100 to-amber-100 rounded-lg p-8 text-center mb-8">
+            <div
+              class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-user text-white text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">David Kim</h3>
+            <p class="text-yellow-600 font-semibold mb-4">Head of Quality Assurance & Auditing</p>
+            <blockquote class="text-lg text-gray-600 italic">
+              "Quality is not an act, it is a habit. We ensure every product that leaves our facilities meets the
+              highest standards of excellence."
+            </blockquote>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Quality Team</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Our quality assurance team implements rigorous testing and auditing processes across all stages of
+            production,
+            ensuring that every product meets our stringent quality standards and customer expectations.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-yellow-600 mb-2">30+</div>
+              <p class="text-gray-600">Quality Inspectors</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">100%</div>
+              <p class="text-gray-600">Quality Check Rate</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">0.1%</div>
+              <p class="text-gray-600">Defect Rate</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">18+</div>
+              <p class="text-gray-600">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Photos/Video Snippets -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-yellow-200 to-yellow-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-check-circle text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-red-200 to-red-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-microscope text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-green-200 to-green-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-shield-alt text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logistics & Delivery Department -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Logistics & Delivery</h2>
+        <p class="text-xl text-gray-600">Global logistics experts ensuring products reach customers worldwide</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <div class="bg-gradient-to-br from-red-100 to-pink-100 rounded-lg p-8 text-center mb-8">
+            <div
+              class="w-32 h-32 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-user text-white text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Lisa Wang</h3>
+            <p class="text-red-600 font-semibold mb-4">Head of Logistics & Delivery</p>
+            <blockquote class="text-lg text-gray-600 italic">
+              "We don't just deliver products, we deliver promises. Every package represents our commitment to
+              excellence and customer satisfaction."
+            </blockquote>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Logistics Team</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Our logistics team manages the complex process of getting products from our facilities to customers
+            worldwide,
+            ensuring timely delivery, proper handling, and customer satisfaction at every step.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">50+</div>
+              <p class="text-gray-600">Countries Served</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">99.5%</div>
+              <p class="text-gray-600">On-Time Delivery</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
+              <p class="text-gray-600">Tracking Support</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">12+</div>
+              <p class="text-gray-600">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Photos/Video Snippets -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-red-200 to-red-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-shipping-fast text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-red-200 to-red-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-truck text-white text-4xl"></i>
+        </div>
+        <div class="bg-gradient-to-br from-green-200 to-green-400 rounded-lg h-48 flex items-center justify-center">
+          <i class="fas fa-warehouse text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-red-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Ready to Work with Our Experts?</h2>
+      <p class="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
+        Our dedicated team of experts is ready to help you bring your home furnishing vision to life.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+          Meet Our Full Team
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition duration-300">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Get in Touch Section - Loaded from component -->
+  <div data-component="components/get-in-touch.html"></div>
+
+  <!-- Footer Section -->
+  <footer class="bg-white text-gray-600 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm text-gray-600">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Home</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Who We Are</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Blog</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-red-600 duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-red-600 duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="components/component-loader.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supply Chain Innovation - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+      <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <img src="Logo/Logo.jpg" alt="Logo"
+                class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-red-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-1">
+            <a href="index.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="services.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Why We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+            <div class="relative group">
+              <button class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div
+                class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div class="py-2">
+                  <a href="esg-strategy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply Chain Innovation</a>
+                  <a href="investors.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+                  <a href="media.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+                  <a href="suppliers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+                  <a href="careers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-lg">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Why We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">About Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply Chain Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md">
+            Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-red-50 to-indigo-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          Supply Chain <span class="text-red-600">Innovation</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We convene the global supply chain creating customized, end-to-end supply chain and logistics solutions for
+          brands and retailers. What sets us apart is our high degree of flexibility and scalability which is unrivaled
+          in our industry.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supply Chain Overview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">We are creating the supply chain of the future</h2>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+          Traditional supply chain management is undergoing massive change driven by disruptive technologies in the
+          retail industry. At Just A Click, we're changing the game and landscape of our industry with innovative
+          services and solutions.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-shopping-cart text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Retail</h3>
+          <p class="text-gray-600">The supply chain journey follows the creation and movement of goods around the world.
+            That journey begins and ends with the consumer.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-pencil-ruler text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Design</h3>
+          <p class="text-gray-600">From concept to design brief, the design process translates trends into products that
+            meet the needs of today's demanding consumer.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-search text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Sourcing</h3>
+          <p class="text-gray-600">Finding the right materials and factories that share our commitment to quality,
+            compliance and sustainability is a fundamental activity.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-industry text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Production</h3>
+          <p class="text-gray-600">Merchandisers, designers, quality engineers and product development experts work with
+            factories to ensure products meet the requirements.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-shipping-fast text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Logistics</h3>
+          <p class="text-gray-600">Logistics solutions start from the moment the product leaves the factory to the time
+            it reaches the hands of a happy shopper.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-8 text-center">
+          <div class="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-chart-line text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Analytics</h3>
+          <p class="text-gray-600">Data-driven insights and analytics to optimize every step of the supply chain
+            process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Platform -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">The Just A Click Digital Platform</h2>
+          <p class="text-xl text-gray-600 mb-8">
+            Our goal is to fully digitalize each step of the global supply chain so that data can flow seamlessly,
+            providing end-to-end visibility for our customers, suppliers and other stakeholders.
+          </p>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Real-time Visibility</h3>
+                <p class="text-gray-600">Track products and orders in real-time across the entire supply chain.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Data-Driven Insights</h3>
+                <p class="text-gray-600">Capture data-driven insights to enhance productivity and decision making.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Disruption Management</h3>
+                <p class="text-gray-600">Stay ahead of disruptions at retail with predictive analytics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-red-100 to-indigo-100 rounded-lg p-8">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Speed Improvement</h3>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-white rounded-lg p-4">
+                <div class="text-3xl font-bold text-gray-400 mb-2">40</div>
+                <p class="text-sm text-gray-600">Weeks (Traditional)</p>
+              </div>
+              <div class="bg-white rounded-lg p-4">
+                <div class="text-3xl font-bold text-red-600 mb-2">21</div>
+                <p class="text-sm text-gray-600">Weeks (With Digital)</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-green-600 mb-2">47%</div>
+            <p class="text-gray-600">Faster Product Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supply Chain Solutions -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Supply Chain Solutions</h2>
+        <p class="text-xl text-gray-600">Our supply chain solutions are all about helping our customers and suppliers
+          deliver speed, efficiency and profitability.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cube text-red-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Materials Platform</h3>
+          <p class="text-gray-600 mb-6">Comprehensive materials sourcing and management platform with real-time
+            availability and pricing.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Global supplier network</li>
+            <li>• Real-time pricing</li>
+            <li>• Quality certifications</li>
+            <li>• Sustainability tracking</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cube text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">3D Design Platform</h3>
+          <p class="text-gray-600 mb-6">Advanced 3D design and prototyping tools for rapid product development and
+            visualization.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• 3D modeling tools</li>
+            <li>• Virtual prototyping</li>
+            <li>• Collaborative design</li>
+            <li>• AR/VR integration</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cube text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Vendor Platform</h3>
+          <p class="text-gray-600 mb-6">Comprehensive vendor management system for supplier onboarding, performance
+            tracking, and collaboration.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Supplier onboarding</li>
+            <li>• Performance tracking</li>
+            <li>• Quality management</li>
+            <li>• Payment processing</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cube text-yellow-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Production Platform</h3>
+          <p class="text-gray-600 mb-6">End-to-end production management with real-time monitoring and quality control.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Production planning</li>
+            <li>• Quality control</li>
+            <li>• Real-time monitoring</li>
+            <li>• Compliance tracking</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cube text-red-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Logistics Platform</h3>
+          <p class="text-gray-600 mb-6">Advanced logistics and shipping management with global tracking and
+            optimization.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Global shipping</li>
+            <li>• Route optimization</li>
+            <li>• Tracking & monitoring</li>
+            <li>• Customs clearance</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+          <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cube text-indigo-600 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Analytics Platform</h3>
+          <p class="text-gray-600 mb-6">Comprehensive analytics and reporting tools for data-driven decision making.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li>• Performance analytics</li>
+            <li>• Predictive insights</li>
+            <li>• Custom reporting</li>
+            <li>• Business intelligence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Impact -->
+  <section class="py-20 bg-gradient-to-br from-red-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Our Business Impact</h2>
+        <p class="text-xl text-red-100">Millions of consumer goods pass through Just A Click's supply chain every year
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl font-bold text-white mb-2">10M+</div>
+          <p class="text-red-100">Products Delivered Annually</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-white mb-2">5,000+</div>
+          <p class="text-red-100">Global Suppliers</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-white mb-2">50+</div>
+          <p class="text-red-100">Countries Served</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-white mb-2">99.5%</div>
+          <p class="text-red-100">On-Time Delivery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Supply Chain?</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Join thousands of brands and retailers who trust Just A Click for their supply chain needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
+          Explore Solutions
+        </button>
+        <button
+          class="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition duration-300">
+          Request Demo
+        </button>
+        <button
+          class="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+          Partner with Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Get in Touch Section - Loaded from component -->
+  <div data-component="components/get-in-touch.html"></div>
+
+  <!-- Footer Section -->
+  <footer class="bg-white text-gray-600 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm text-gray-600">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Home</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Who We Are</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Blog</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-red-600 duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-red-600 duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="components/component-loader.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

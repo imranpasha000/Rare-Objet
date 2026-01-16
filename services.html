@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Just A Click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-1 min-w-0">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="block">
+              <img src="Logo/Logo.jpg" alt="Logo"
+                class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+            </a>
+          </div>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="md:hidden flex-shrink-0 ml-2">
+          <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+            class="text-gray-700 hover:text-red-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl" id="icon-open"></i>
+            <i class="fas fa-times text-xl hidden" id="icon-close"></i>
+          </button>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-1">
+            <a href="index.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="services.html"
+              class="text-gray-900 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-red-50">Services</a>
+            <a href="products.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
+            <a href="why-we-exist.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Why
+              We Exist</a>
+            <a href="portfolio.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="about-us.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About
+              Us</a>
+            <a href="news.html"
+              class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+            <div class="relative group">
+              <button
+                class="text-gray-500 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div
+                class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div class="py-2">
+                  <a href="esg-strategy.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG
+                    Strategy</a>
+                  <a href="supply-chain-innovation.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply
+                    Chain Innovation</a>
+                  <a href="investors.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+                  <a href="media.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+                  <a href="suppliers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+                  <a href="careers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <a href="login.html"
+            class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-lg">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Home</a>
+        <a href="services.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-red-50 text-red-600">Services</a>
+        <a href="products.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Products</a>
+        <a href="why-we-exist.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Why
+          We Exist</a>
+        <a href="portfolio.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Portfolio</a>
+        <a href="about-us.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">About
+          Us</a>
+        <a href="news.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">News</a>
+        <div class="pt-2 mt-2 border-t border-gray-200" aria-label="More">
+          <a href="esg-strategy.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">ESG
+            Strategy</a>
+          <a href="supply-chain-innovation.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Supply
+            Chain Innovation</a>
+          <a href="investors.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Investors</a>
+          <a href="media.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Media</a>
+          <a href="suppliers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Suppliers</a>
+          <a href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">Careers</a>
+        </div>
+        <div class="pt-3">
+          <a href="login.html"
+            class="block text-center w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md">
+            Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Grid -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Our <span class="gradient-text">Services</span></h2>
+        <p>End-to-end home furnishing solutions – from exclusive designs to global delivery.</p>
+      </div>
+
+      <!-- Services Cards -->
+      <div class="strategy-cards">
+        <!-- Service 1 -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Design</div>
+            <h3>IN-HOUSE PRODUCT DESIGN</h3>
+            <div class="card-divider"></div>
+            <p>Our creative team designs unique, market-ready home furnishing products tailored to your specific needs
+              and target audience.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Custom design
+                  development</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Market
+                  research and trends</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">3D modeling
+                  and prototyping</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Design
+                  optimization</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Sourcing</div>
+            <h3>SOURCING & PROCUREMENT</h3>
+            <div class="card-divider"></div>
+            <p>We source high-quality materials and components from verified suppliers worldwide, ensuring the best
+              value and quality.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Global supplier network</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Quality verification</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Cost optimization</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Supply chain management</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-industry"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Production</div>
+            <h3>MANUFACTURING & PRODUCTION</h3>
+            <div class="card-divider"></div>
+            <p>Complete production management with state-of-the-art facilities and skilled craftsmen ensuring quality
+              and efficiency.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Production planning</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Quality control</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Timeline management</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Capacity optimization</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Quality</div>
+            <h3>QUALITY ASSURANCE & AUDITING</h3>
+            <div class="card-divider"></div>
+            <p>Rigorous quality checks and auditing processes to ensure every product meets our high standards.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Multi-stage quality checks</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Compliance verification</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Performance testing</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Documentation and certification</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Custom</div>
+            <h3>CUSTOMIZATION & TAILORED SOLUTIONS</h3>
+            <div class="card-divider"></div>
+            <p>Flexible customization options to meet your specific requirements and market demands.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Custom specifications</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Brand integration</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Size and color options</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Special requirements</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="strategy-card">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="card-content-wrapper">
+            <div class="card-badge">Shipping</div>
+            <h3>GLOBAL SHIPPING & LOGISTICS</h3>
+            <div class="card-divider"></div>
+            <p>Worldwide shipping and logistics services to deliver your products anywhere in the world safely and on
+              time.</p>
+            <ul class="text-sm text-white/70 space-y-2 mt-4">
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">International shipping</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Customs clearance</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Tracking and monitoring</span></li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-red-400 mr-2 text-xs"></i> <span
+                  class="text-black">Insurance coverage</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section class="strategy-section">
+    <div class="premium-bg-overlay"></div>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Our <span class="gradient-text">Process</span></h2>
+        <p>How we bring your vision to life</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-red-200"></div>
+
+        <div class="space-y-12">
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">1. Consultation & Planning</h3>
+                <p class="text-gray-600">We understand your needs and create a detailed project plan.</p>
+              </div>
+            </div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">1
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">2
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">2. Design & Development</h3>
+                <p class="text-gray-600">Our team creates custom designs and prototypes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">3. Production & Quality</h3>
+                <p class="text-gray-600">Manufacturing with strict quality control processes.</p>
+              </div>
+            </div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">3
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">4
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">4. Delivery & Support</h3>
+                <p class="text-gray-600">Global shipping and ongoing customer support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-red-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+      <p class="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
+        Let us help you transform your home furnishing business with our comprehensive services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+          Request a Quote
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition duration-300">
+          Explore Our Designs
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition duration-300">
+          Become a Supplier
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get in Touch Section - Loaded from component -->
+  <div data-component="components/get-in-touch.html"></div>
+
+  <!-- Footer -->
+  <!-- Footer Section -->
+  <footer class="bg-white text-gray-600 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <!-- Top Section -->
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <!-- Logo & About -->
+        <div>
+          <img src="Logo/Logo.jpg" alt="Logo" class="mb-4 w-32">
+          <p class="text-sm text-gray-600">
+            Your partner in turning surplus into success. We help you offload excess inventory and reduce storage costs
+            with
+            seamless solutions.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Home</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Who We Are</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">Blog</a></li>
+            <li><a href="#" class="hover:text-red-600 duration-300 text-gray-600">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Email: info@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: Global Office</li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-red-600 text-xl text-gray-600"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+        <p>© 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-red-600 duration-300">Terms of Service</a>
+          <a href="#" class="hover:text-red-600 duration-300">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="components/component-loader.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
