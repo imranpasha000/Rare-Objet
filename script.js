@@ -320,6 +320,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+<<<<<<< HEAD
 // EmailJS Configuration
 // Replace these with your EmailJS credentials from https://www.emailjs.com/
 const EMAILJS_CONFIG = {
@@ -423,10 +424,16 @@ function handleFormSubmit(event) {
   }
 }
 
+=======
+>>>>>>> 2654654c90cace02688241fa5d22a01222a213f5
 // Export functions for global access
 window.JustAClick = {
   showLoginModal,
   showNotification,
+<<<<<<< HEAD
   handleFormSubmission,
   handleFormSubmit
+=======
+  handleFormSubmission
+>>>>>>> 2654654c90cace02688241fa5d22a01222a213f5
 };

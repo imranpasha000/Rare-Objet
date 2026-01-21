@@ -2301,6 +2301,7 @@ footer .strategy-cards {
   }
 }
 
+<<<<<<< HEAD
 /* Bullseye Emoji with Fluctuating Animation */
 .bullseye-emoji-container {
   display: flex;
@@ -2331,6 +2332,8 @@ footer .strategy-cards {
   }
 }
 
+=======
+>>>>>>> 2654654c90cace02688241fa5d22a01222a213f5
 .card-content-wrapper {
   flex: 1;
   display: flex;
@@ -2599,6 +2602,7 @@ footer .strategy-cards {
   .service-card-with-bg:hover .service-card-bg {
     opacity: 0.25;
   }
+<<<<<<< HEAD
 }
 
 /* Get in Touch Form Section */
@@ -2825,4 +2829,6 @@ footer .strategy-cards {
     padding: 10px 20px;
     font-size: 0.9375rem;
   }
+=======
+>>>>>>> 2654654c90cace02688241fa5d22a01222a213f5
 }
