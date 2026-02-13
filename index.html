@@ -132,6 +132,170 @@
       </div>
     </div>
   </nav>
+<section>
+
+  <!-- POPUP HTML -->
+  <div id="maintenancePopup" class="maintenance-popup">
+    <div class="maintenance-box">
+      
+      <div class="icon">⚠</div>
+
+      <h2>Site Maintenance</h2>
+      <p class="subtitle">Hang tight, we are upgrading.</p>
+
+      <p class="description">
+        We’re working hard to make things amazing for you.
+        Check back soon for the grand reopening!
+      </p>
+
+      <div class="contact-info">
+        <p><strong>For assistance, contact us:</strong></p>
+        <p>Email: <a href="mailto:Info@aclick.ae">Info@aclick.ae</a></p>
+        <p>Email: <a href="mailto:Abdul@aclick.ae">Abdul@aclick.ae</a></p>
+        <p>Phone: <a href="tel:+971553166873">+971553166873</a></p>
+        <p>WhatsApp:
+          <a href="https://wa.me/971553166873" target="_blank">
+            +971553166873
+          </a>
+        </p>
+      </div>
+
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- POPUP CSS -->
+  <style>
+    .maintenance-popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .maintenance-popup.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .maintenance-box {
+      background: #ffffff;
+      width: 92%;
+      max-width: 540px;
+      padding: 35px 30px;
+      border-radius: 18px;
+      text-align: center;
+      font-family: "Segoe UI", sans-serif;
+
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+      animation: popupEnter 0.45s ease;
+      border-top: 6px solid #d90429;
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #d90429;
+    }
+
+    .maintenance-box h2 {
+      font-size: 26px;
+      margin-bottom: 6px;
+      color: #111;
+    }
+
+    .subtitle {
+      font-weight: 600;
+      color: #d90429;
+      margin-bottom: 14px;
+    }
+
+    .description {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .contact-info {
+      background: #fff5f5;
+      border: 1px solid #ffd6d6;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: left;
+      font-size: 14px;
+      margin: 18px 0;
+    }
+
+    .contact-info p {
+      margin: 6px 0;
+      color: #333;
+    }
+
+    .contact-info a {
+      color: #d90429;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .maintenance-box button {
+      margin-top: 10px;
+      padding: 11px 28px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #d90429, #ef233c);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(217, 4, 41, 0.35);
+    }
+
+    .maintenance-box button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(217, 4, 41, 0.45);
+    }
+
+    @keyframes popupEnter {
+      from {
+        transform: translateY(20px) scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <!-- POPUP JS -->
+  <script>
+    // Show popup after 5 seconds
+    setTimeout(() => {
+      document.getElementById("maintenancePopup")
+              .classList.add("show");
+    }, 5000);
+
+    function closePopup() {
+      document.getElementById("maintenancePopup")
+              .classList.remove("show");
+    }
+  </script>
+
+</section>
 
 
   <section class="relative w-full min-h-screen overflow-hidden flex items-center justify-center pt-16">
@@ -218,18 +382,10 @@
           <div class="card-glow"></div>
           <div class="card-icon-wrapper">
             <div class="icon-bg"></div>
-<<<<<<< HEAD
-            <div class="bullseye-emoji-container">
-              <picture>
-                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3af/512.webp" type="image/webp">
-                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3af/512.gif" alt="🎯" width="48" height="48" class="bullseye-emoji">
-              </picture>
-=======
             <div class="bullseye-container">
               <div class="bullseye-circle bullseye-outer"></div>
               <div class="bullseye-circle bullseye-middle"></div>
               <i class="fas fa-bullseye bullseye-center"></i>
->>>>>>> 2654654c90cace02688241fa5d22a01222a213f5
             </div>
           </div>
           <div class="card-content-wrapper">
